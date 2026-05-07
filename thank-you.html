@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You | Key Partners Funding</title>
+<meta name="description" content="Application received. Key Partners Funding will be in touch shortly.">
+<meta name="robots" content="noindex, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream:        #F8F4ED;
+    --cream-deep:   #F0E9DC;
+    --paper:        #FBF8F2;
+    --navy:         #0D1B2A;
+    --navy-mid:     #162436;
+    --navy-soft:    #1E3148;
+    --gold:         #C89B3C;
+    --gold-bright:  #E8B84B;
+    --gold-deep:    #A88130;
+    --ink:          #1F2937;
+    --ink-muted:    #5C6470;
+    --ink-soft:     #8B8378;
+    --rule:         #D9CFB8;
+    --rule-soft:    #E8DFCB;
+    --display:      'Fraunces', Georgia, 'Times New Roman', serif;
+    --body:         'DM Sans', system-ui, -apple-system, sans-serif;
+    --container:    1100px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--body);
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+  .container { max-width: var(--container); margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px); }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(248,244,237,0.92);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 56px);
+    height: 84px; display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; }
+  .nav-logo-mark { width: 36px; height: 36px; object-fit: contain; border-radius: 4px; }
+  .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .nav-logo-name { font-family: var(--display); font-weight: 700; font-size: 17px; color: var(--navy); }
+  .nav-logo-sub { font-size: 9.5px; color: var(--ink-muted); letter-spacing: 2.2px; text-transform: uppercase; font-weight: 500; margin-top: 2px; }
+  .nav-links { display: flex; align-items: center; gap: 32px; }
+  .nav-links a { color: var(--navy); font-size: 14px; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold-deep); }
+  .nav-services { position: relative; }
+  .nav-services > a { display: inline-flex; align-items: center; gap: 4px; }
+  .nav-dropdown {
+    position: absolute; top: calc(100% + 18px); left: 50%;
+    transform: translateX(-50%) translateY(-4px);
+    background: var(--paper); border: 1px solid var(--rule);
+    padding: 6px; min-width: 240px;
+    opacity: 0; visibility: hidden;
+    transition: all 0.2s ease;
+    box-shadow: 0 12px 32px -16px rgba(13,27,42,0.18);
+  }
+  .nav-services:hover .nav-dropdown {
+    opacity: 1; visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+  .nav-dropdown a { display: block; padding: 11px 16px; color: var(--ink) !important; font-size: 14px; border-radius: 2px; }
+  .nav-dropdown a:hover { background: var(--cream-deep); color: var(--navy) !important; }
+  .nav-cta { background: var(--gold); color: var(--navy) !important; padding: 10px 22px; font-weight: 600 !important; transition: background 0.2s; }
+  .nav-cta:hover { background: var(--gold-bright); }
+  .nav-toggle { display: none; }
+
+  /* HERO/CONFIRMATION */
+  main { flex: 1; display: flex; align-items: center; padding: calc(84px + 60px) 0 80px; }
+  .ty-card {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .ty-mark {
+    width: 80px; height: 80px;
+    margin: 0 auto 28px;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold-deep);
+    font-family: var(--display);
+    font-size: 40px;
+    font-weight: 600;
+    background: var(--paper);
+  }
+  .ty-eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--gold-deep); margin-bottom: 18px;
+  }
+  .ty-eyebrow::before, .ty-eyebrow::after { content: ''; width: 28px; height: 1.5px; background: var(--gold); }
+  .ty-title {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(40px, 5.5vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    color: var(--navy);
+    margin-bottom: 18px;
+  }
+  .ty-title em { font-style: italic; font-weight: 400; color: var(--gold-deep); }
+  .ty-sub {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink-muted);
+    max-width: 560px;
+    margin: 0 auto 40px;
+  }
+  .ty-actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px; border-radius: 4px;
+    font-family: var(--body); font-size: 14px;
+    font-weight: 600; letter-spacing: 0.3px;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--navy); color: var(--cream); }
+  .btn-primary:hover { background: var(--navy-mid); box-shadow: 0 6px 24px -8px rgba(13,27,42,0.3); }
+  .btn-secondary { background: transparent; color: var(--navy); border-color: var(--navy); }
+  .btn-secondary:hover { background: var(--navy); color: var(--cream); }
+  .btn .arrow { transition: transform 0.25s ease; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  .ty-contact {
+    border-top: 1px solid var(--rule);
+    padding-top: 32px;
+    font-size: 14px;
+    color: var(--ink-muted);
+  }
+  .ty-contact a {
+    color: var(--gold-deep);
+    border-bottom: 1px solid rgba(168,129,48,0.4);
+    transition: all 0.2s;
+  }
+  .ty-contact a:hover { color: var(--navy); border-bottom-color: var(--navy); }
+  .ty-phone {
+    font-family: var(--display);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 8px 0 4px;
+    display: block;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    color: #CBD5E1;
+    padding: 56px 0 28px;
+  }
+  .footer-inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 56px);
+    text-align: center;
+  }
+  .footer-bottom {
+    font-size: 12.5px; color: #6B7889;
+    display: flex; justify-content: center; gap: 22px; flex-wrap: wrap;
+  }
+  .footer-bottom a { color: #94A3B8; }
+  .footer-bottom a:hover { color: var(--gold-bright); }
+
+  @media (max-width: 960px) {
+    .nav-links { display: none; position: absolute; top: 84px; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--rule); flex-direction: column; padding: 20px 5%; gap: 16px; align-items: stretch; }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 8px 0; }
+    .nav-services { width: 100%; }
+    .nav-dropdown { position: static; transform: none; opacity: 1; visibility: visible; box-shadow: none; border: none; padding: 0 0 0 16px; min-width: 0; }
+    .nav-dropdown a { padding: 6px 0; }
+    .nav-cta { text-align: center; padding: 12px 22px; }
+    .nav-toggle { display: flex; flex-direction: column; gap: 4px; padding: 8px; background: none; border: none; cursor: pointer; }
+    .nav-toggle span { width: 22px; height: 1.5px; background: var(--navy); }
+  }
+</style>
+
+<link rel="icon" type="image/x-icon" href="./favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="./favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="./index.html" class="nav-logo">
+      <img src="./logo-mark.png" alt="Key Partners Funding logo" class="nav-logo-mark">
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">Key Partners Funding</span>
+        <span class="nav-logo-sub">Hard Money Lender · Brentwood, TN</span>
+      </div>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="./index.html">Home</a>
+      <div class="nav-services">
+        <a href="#" onclick="event.preventDefault()" style="display:flex;align-items:center;gap:4px;">Loan Products ▾</a>
+        <div class="nav-dropdown">
+          <a href="./transactional-funding.html">Transactional Funding</a>
+          <a href="./rehab-loans.html">Rehab Loans</a>
+          <a href="./new-construction.html">New Construction</a>
+          <a href="./dscr.html">DSCR Loans</a>
+        </div>
+      </div>
+      <a href="./index.html#why">About</a>
+      <a href="./index.html#apply" class="nav-cta">Apply Now</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="ty-card">
+      <div class="ty-mark">✓</div>
+      <div class="ty-eyebrow">Application Received</div>
+      <h1 class="ty-title">Thanks<span id="ty-name"></span>—<br><em>we'll be in touch.</em></h1>
+      <p class="ty-sub">
+        Your application has been received. A member of our team will review your deal and follow up shortly — typically within one business day.
+      </p>
+
+      <div class="ty-actions">
+        <a href="./index.html" class="btn btn-secondary">Back to Home</a>
+        <a href="./proof-of-funds.html" class="btn btn-primary">Need a POF Letter? <span class="arrow">→</span></a>
+      </div>
+
+      <div class="ty-contact">
+        Have a question or a time-sensitive deal?
+        <a href="tel:6159796260" class="ty-phone">615-979-6260</a>
+        <a href="mailto:info@keypartnersfunding.com">info@keypartnersfunding.com</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom">
+      <span>© 2026 Key Partners Funding. All rights reserved.</span>
+      <a href="./privacy-policy.html">Privacy Policy</a>
+      <a href="./terms-of-service.html">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Personalize the heading with the user's first name (passed as URL param)
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const first = (params.get('first_name') || '').trim();
+    if (first) {
+      // Insert a space + name (with a sensible cap on length)
+      document.getElementById('ty-name').textContent = ', ' + first.slice(0, 30);
+    }
+  })();
+</script>
+
+</body>
+</html>
