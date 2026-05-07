@@ -951,6 +951,9 @@
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="./favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
@@ -1399,13 +1402,25 @@
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(data).toString()
       });
-      document.getElementById('nc-fields').style.display = 'none';
-      document.getElementById('nc-success').style.display = 'block';
-    } catch (err) {
-      document.getElementById('nc-fields').style.display = 'none';
-      document.getElementById('nc-success').style.display = 'block';
-    }
+    } catch (err) { /* Netlify still captures in production */ }
+    const params = new URLSearchParams({
+      first_name: data.get('first-name') || '',
+      product: 'new-construction'
+    });
+    window.location.href = './thank-you.html?' + params.toString();
   }
+  // Prefill basic info from URL params (when arriving from homepage lead form)
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const fields = { 'first_name': 'first-name', 'last_name': 'last-name', 'email': 'email', 'phone': 'phone' };
+    Object.keys(fields).forEach(function (key) {
+      const val = params.get(key);
+      if (!val) return;
+      const input = document.querySelector('input[name="' + fields[key] + '"]');
+      if (input) input.value = val;
+    });
+  })();
+
 
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
