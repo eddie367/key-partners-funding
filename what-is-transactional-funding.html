@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>New Construction Loans | Key Partners Funding</title>
-<meta name="description" content="Ground-up construction loans for residential builders and developers. Up to $5M, no minimum, rates from 9%, up to 90% LTC, draws released as milestones complete. 615-979-6260.">
-<link rel="canonical" href="https://keypartnersfunding.com/new-construction.html">
-
+<title>What Is Transactional Funding? Why, When, and How It Works | Key Partners Funding</title>
+<meta name="description" content="Transactional funding is 24-hour capital for the A-B leg of a double close. Learn why wholesalers use it, when it makes sense, and exactly how the funding works.">
+<link rel="canonical" href="https://keypartnersfunding.com/what-is-transactional-funding.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -184,13 +183,39 @@
     margin-bottom: 14px;
     letter-spacing: 0.1px;
   }
-  .callout-body {
+  .callout ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .callout li {
     font-size: 14.5px;
     color: var(--ink-muted);
-    line-height: 1.7;
+    line-height: 1.6;
+    padding-left: 22px;
+    position: relative;
+  }
+  .callout li::before {
+    content: '';
+    position: absolute;
+    top: 9px; left: 0;
+    width: 12px; height: 1px;
+    background: var(--gold);
+  }
+  .callout-note {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule-soft);
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-family: var(--display);
   }
 
-  /* Reassure banner */
+  /* Note line (light reassurance) */
   .reassure {
     margin-top: 20px;
     padding: 14px 20px;
@@ -417,17 +442,23 @@
   }
 
   /* =========================
-     PROGRAM TERMS
+     WHAT IS IT
      ========================= */
-  .program-terms { padding: var(--section-pad) 0; }
-  .program-terms-grid {
+  .what-is { padding: var(--section-pad) 0; }
+  .what-is-grid {
     display: grid;
-    grid-template-columns: 1fr 1.15fr;
+    grid-template-columns: 1.1fr 1fr;
     gap: clamp(40px, 6vw, 80px);
     align-items: start;
   }
+  .what-is-body p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--ink-muted);
+    line-height: 1.75;
+  }
 
-  /* Info grid — 2x4 layout */
+  /* Info grid — 2x3 layout, hairline rules */
   .info-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -464,49 +495,28 @@
   }
 
   /* =========================
-     PROCESS — 2-col layout (callout left, steps right)
+     PROCESS (vertical 5-step)
      ========================= */
   .process { padding: var(--section-pad) 0; }
   .process-head {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 64px;
   }
   .process-head .eyebrow { justify-content: center; }
   .process-head .section-sub { margin: 12px auto 0; }
 
   .process-grid {
     display: grid;
-    grid-template-columns: 1fr 1.25fr;
+    grid-template-columns: 1fr 1.2fr;
     gap: clamp(40px, 6vw, 80px);
     align-items: start;
-  }
-
-  /* Callout bullet list — used inside .callout */
-  .callout-list {
-    margin: 8px 0 0 0;
-    padding: 0 0 0 18px;
-    list-style: none;
-  }
-  .callout-list li {
-    position: relative;
-    font-size: 14.5px;
-    color: var(--ink-muted);
-    line-height: 1.7;
-    padding: 6px 0;
-  }
-  .callout-list li::before {
-    content: '';
-    position: absolute;
-    left: -18px;
-    top: 16px;
-    width: 6px;
-    height: 1px;
-    background: var(--gold);
   }
 
   .process-steps {
     display: flex;
     flex-direction: column;
+    gap: 0;
+    position: relative;
   }
   .process-step {
     display: grid;
@@ -514,6 +524,7 @@
     gap: 28px;
     padding: 28px 0;
     border-bottom: 1px solid var(--rule-soft);
+    position: relative;
   }
   .process-step:first-child { padding-top: 0; }
   .process-step:last-child { border-bottom: none; }
@@ -551,7 +562,7 @@
   .faq { padding: var(--section-pad) 0; }
   .faq-head {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 56px;
   }
   .faq-head .eyebrow { justify-content: center; }
   .faq-list {
@@ -619,7 +630,10 @@
     border-bottom: 1px solid rgba(168,129,48,0.4);
     transition: all 0.2s;
   }
-  .faq-a-inner a:hover { color: var(--navy); border-bottom-color: var(--navy); }
+  .faq-a-inner a:hover {
+    color: var(--navy);
+    border-bottom-color: var(--navy);
+  }
 
   /* =========================
      APPLY
@@ -910,9 +924,11 @@
   @media (max-width: 960px) {
     .hero-grid { grid-template-columns: 1fr; }
     .hero-photo { aspect-ratio: 4/3; max-height: 480px; }
-    .program-terms-grid { grid-template-columns: 1fr; }
+
+    .what-is-grid { grid-template-columns: 1fr; }
     .process-grid { grid-template-columns: 1fr; }
     .apply-grid { grid-template-columns: 1fr; }
+
     .footer-grid { grid-template-columns: 1fr 1fr; }
 
     .nav-links { display: none; position: absolute; top: 84px; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--rule); flex-direction: column; padding: 20px 5%; gap: 16px; align-items: stretch; }
@@ -946,6 +962,7 @@
     .trust-bar-inner { gap: 10px 18px; }
     .trust-item { gap: 18px; font-size: 12.5px; }
     .process-step { grid-template-columns: 1fr; gap: 16px; }
+    .process-num { margin-bottom: 4px; }
   }
 </style>
   <!-- Favicons -->
@@ -964,9 +981,83 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://keypartnersfunding.com/og-image.png">
+
+<style>
+  /* ---- article layout ---- */
+  .article-hero { background: var(--navy); color: var(--cream); padding: clamp(64px,9vw,120px) 0 clamp(40px,5vw,64px); position: relative; }
+  .article-hero .eyebrow { color: var(--gold-bright); }
+  .article-hero .eyebrow::before { background: var(--gold-bright); }
+  .article-hero h1 { font-family: var(--display); font-weight: 600; font-size: clamp(34px,5vw,60px); line-height: 1.05; letter-spacing: -0.5px; max-width: 15ch; }
+  .article-hero h1 em { font-style: italic; font-weight: 400; color: var(--gold-bright); }
+  .article-hero .lede { font-size: clamp(17px,1.5vw,20px); color: #C9D2DC; line-height: 1.6; max-width: 60ch; margin-top: 20px; }
+  .article-meta { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 28px; font-size: 13px; color: #9FB0C0; letter-spacing: 0.3px; }
+  .article-meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .article-meta span::before { content: ''; width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); }
+
+  .article-wrap { padding: clamp(48px,6vw,84px) 0 clamp(32px,4vw,56px); }
+  .prose { max-width: 720px; margin: 0 auto; }
+  .prose h2 { font-family: var(--display); font-weight: 600; font-size: clamp(26px,3vw,36px); line-height: 1.15; color: var(--navy); letter-spacing: -0.3px; margin: 52px 0 16px; }
+  .prose h2:first-child { margin-top: 0; }
+  .prose h3 { font-family: var(--display); font-weight: 600; font-size: 21px; color: var(--navy); letter-spacing: -0.2px; margin: 34px 0 10px; }
+  .prose p { font-size: 17px; line-height: 1.75; color: var(--ink); margin-bottom: 18px; }
+  .prose ul, .prose ol { margin: 0 0 20px 2px; padding-left: 22px; }
+  .prose li { font-size: 17px; line-height: 1.7; color: var(--ink); margin-bottom: 9px; }
+  .prose li::marker { color: var(--gold-deep); }
+  .prose strong { font-weight: 700; color: var(--navy); }
+  .prose a.inline { color: var(--gold-deep); font-weight: 600; box-shadow: inset 0 -1px 0 var(--rule); }
+  .prose a.inline:hover { box-shadow: inset 0 -2px 0 var(--gold); }
+  .prose .lead { font-size: 18.5px; line-height: 1.7; color: var(--ink); font-weight: 500; margin-bottom: 24px; }
+
+  .callout { background: var(--paper); border: 1px solid var(--rule-soft); border-left: 3px solid var(--gold); border-radius: 4px; padding: 22px 26px; margin: 26px 0; }
+  .callout p { margin: 0; font-size: 16px; }
+  .callout .callout-label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 8px; }
+
+  .keytakeaways { background: var(--navy); color: var(--cream); border-radius: 6px; padding: 28px 30px; margin: 30px 0; }
+  .keytakeaways .callout-label { color: var(--gold-bright); display:block; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:14px; }
+  .keytakeaways ul { margin: 0; padding-left: 20px; }
+  .keytakeaways li { color: #DDE4EC; margin-bottom: 10px; }
+  .keytakeaways li::marker { color: var(--gold-bright); }
+
+  .steps { counter-reset: step; margin: 26px 0; }
+  .step { display: grid; grid-template-columns: 44px 1fr; gap: 18px; padding: 18px 0; border-top: 1px solid var(--rule-soft); }
+  .step:last-child { border-bottom: 1px solid var(--rule-soft); }
+  .step-num { counter-increment: step; }
+  .step-num::before { content: counter(step); display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--cream-deep); color: var(--navy); font-family: var(--display); font-weight: 600; font-size: 18px; border: 1px solid var(--rule); }
+  .step h3 { margin: 6px 0 6px; }
+  .step p { margin: 0; font-size: 16px; }
+
+  .cmp { width: 100%; border-collapse: collapse; margin: 26px 0; font-size: 15px; }
+  .cmp th, .cmp td { text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+  .cmp thead th { background: var(--navy); color: var(--cream); font-weight: 600; font-size: 13px; letter-spacing: 0.4px; }
+  .cmp tbody tr:nth-child(even) { background: var(--paper); }
+  .cmp td:first-child { font-weight: 600; color: var(--navy); }
+  .table-scroll { overflow-x: auto; }
+
+  .article-cta { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%); color: var(--cream); border-radius: 8px; padding: clamp(32px,4vw,52px); text-align: center; margin: 8px auto 0; max-width: 860px; }
+  .article-cta h2 { font-family: var(--display); font-weight: 600; font-size: clamp(26px,3vw,38px); color: var(--cream); margin-bottom: 12px; }
+  .article-cta h2 em { font-style: italic; color: var(--gold-bright); font-weight: 400; }
+  .article-cta p { color: #C9D2DC; font-size: 17px; max-width: 52ch; margin: 0 auto 24px; }
+  .article-cta .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  .related { padding: clamp(48px,6vw,80px) 0; background: var(--cream-deep); }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 20px; margin-top: 28px; }
+  .related-card { background: var(--paper); border: 1px solid var(--rule-soft); border-radius: 6px; padding: 24px; transition: all .2s ease; }
+  .related-card:hover { border-color: var(--gold); box-shadow: 0 10px 30px -14px rgba(13,27,42,.25); transform: translateY(-2px); }
+  .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-deep); }
+  .related-card h3 { font-family: var(--display); font-weight: 600; font-size: 20px; color: var(--navy); margin: 10px 0 8px; line-height: 1.2; }
+  .related-card p { font-size: 14.5px; color: var(--ink-muted); line-height: 1.6; margin: 0; }
+
+  /* learn index cards */
+  .learn-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 22px; margin-top: 40px; }
+  .learn-card { display: block; background: var(--paper); border: 1px solid var(--rule-soft); border-radius: 8px; padding: 30px; transition: all .2s ease; }
+  .learn-card:hover { border-color: var(--gold); box-shadow: 0 14px 36px -16px rgba(13,27,42,.3); transform: translateY(-3px); }
+  .learn-card .lc-num { font-family: var(--display); font-size: 15px; color: var(--gold-deep); font-weight: 600; }
+  .learn-card h2 { font-family: var(--display); font-weight: 600; font-size: 23px; color: var(--navy); margin: 12px 0 10px; line-height: 1.2; }
+  .learn-card p { font-size: 15px; color: var(--ink-muted); line-height: 1.65; margin: 0 0 16px; }
+  .learn-card .lc-more { font-size: 13px; font-weight: 700; letter-spacing: 0.4px; color: var(--gold-deep); }
+</style>
 </head>
 <body>
-
 <!-- ============ NAV ============ -->
 <nav>
   <div class="nav-inner">
@@ -985,13 +1076,13 @@
       <div class="nav-services">
         <a href="#" onclick="event.preventDefault()" style="display:flex;align-items:center;gap:4px;" class="active">Loan Products ▾</a>
         <div class="nav-dropdown">
-          <a href="./transactional-funding.html">Transactional Funding</a>
+          <a href="./transactional-funding.html" class="active">Transactional Funding</a>
           <a href="./rehab-loans.html">Rehab Loans</a>
-          <a href="./new-construction.html" class="active">New Construction</a>
+          <a href="./new-construction.html">New Construction</a>
           <a href="./dscr.html">DSCR Loans</a>
         </div>
       </div>
-            <div class="nav-services">
+      <div class="nav-services">
         <a href="#" onclick="event.preventDefault()" style="display:flex;align-items:center;gap:4px;">Learn ▾</a>
         <div class="nav-dropdown">
           <a href="./what-is-transactional-funding.html">What Is Transactional Funding?</a>
@@ -1001,345 +1092,85 @@
         </div>
       </div>
       <a href="./index.html#about">About</a>
-      <a href="#apply" class="nav-cta">Apply Now</a>
+      <a href="./index.html#apply" class="nav-cta">Apply Now</a>
     </div>
   </div>
 </nav>
+<section class="article-hero"><div class="container"><div class="eyebrow">Transactional Funding</div><h1>What Is Transactional <em>Funding?</em></h1><p class="lede">It is the short-term capital that lets a wholesaler close a deal without ever using their own money. Here is what it is, why you would need it, when to use it, and how the funding actually moves.</p><div class="article-meta"><span>Key Partners Funding</span><span>6 min read</span><span>For real estate investors</span></div></div></section>
+<section class="article-wrap"><div class="container"><article class="prose">
+<p class="lead">Transactional funding is short-term capital, usually held for a single day, that pays for the first leg of a back-to-back real estate closing. It exists so a wholesaler can buy a property and resell it the same day without tying up any of their own cash.</p>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="reveal">
-        <div class="hero-badge">
-          <span class="hero-badge-dot"></span>
-          Hard Money Lending Nationwide for Real Estate Investors
-        </div>
-        <h1>New<br>Construction<br><em>Loans.</em></h1>
-        <p class="hero-sub">
-          Financing for builders and developers breaking ground on new residential projects. Interest-only payments, construction draws released as milestones are completed, and no prepayment penalty when you're done.
-        </p>
-        <div class="hero-actions">
-          <a href="#apply" class="btn btn-primary">Get a Quote <span class="arrow">→</span></a>
-          <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
-        </div>
-      </div>
-      <div class="reveal">
-        <img src="./new-construction-hero.jpg" alt="Interior of new construction home mid-framing with subfloor, lumber stacks, and exposed studs" class="hero-photo" loading="eager" />
-      </div>
-    </div>
-  </div>
-</section>
+<p>If you have ever found a deal, put it under contract, and lined up a buyer willing to pay more, you already understand the opportunity. Transactional funding is simply the tool that lets you capture the spread between what you pay and what your buyer pays, cleanly, on paper, with your name on the deed for the moment it needs to be there.</p>
 
-<!-- ============ TRUST BAR ============ -->
-<div class="trust-bar">
-  <div class="trust-bar-inner">
-    <span class="trust-item">Ground-Up Construction</span>
-    <span class="trust-item">Up to $5M Loan Amounts</span>
-    <span class="trust-item">9%–11% · Interest Only</span>
-    <span class="trust-item">Up to 90% LTC</span>
-    <span class="trust-item">No Prepayment Penalty</span>
-  </div>
+<h2>The double close, explained</h2>
+<p>Transactional funding only makes sense inside a specific structure called a double close, or back-to-back closing. There are three parties:</p>
+<ul>
+<li><strong>A</strong> is the original seller you have under contract.</li>
+<li><strong>B</strong> is you, the investor.</li>
+<li><strong>C</strong> is your end buyer, who is paying more than you are.</li>
+</ul>
+<p>Two separate transactions close in sequence. First the <strong>A to B</strong> closing, where you buy from the seller. Then the <strong>B to C</strong> closing, where you sell to your end buyer. The money from the B to C sale is what repays the funding used for the A to B purchase. Your profit is the difference, and it lands in your pocket at the closing table.</p>
+
+<div class="callout">
+<span class="callout-label">The core idea</span>
+<p>You need cash to own the property for the few minutes or hours between the two closings. Transactional funding is that cash. It comes in for the A to B leg and gets paid back out of the B to C leg, often on the very same day.</p>
 </div>
 
-<!-- ============ PROGRAM TERMS ============ -->
-<section class="program-terms" id="terms">
-  <div class="container">
-    <div class="program-terms-grid">
-      <div class="reveal">
-        <div class="eyebrow">Program Terms</div>
-        <h2 class="section-title">Built for<br><em>Builders.</em></h2>
-        <p class="section-sub">Ground-up construction loans for residential builders and developers. Draws released as construction milestones are completed — so capital keeps pace with your project.</p>
+<h2>Why you would need it</h2>
+<p>The obvious answer is that you may not have the full purchase price sitting in the bank, and even if you do, spending it here is rarely the smart move. But there are sharper reasons investors choose to double close instead of simply assigning a contract.</p>
 
-        <div class="callout">
-          <div class="callout-title">Draw Schedule</div>
-          <div class="callout-body">Construction draws are released after you complete different stages of the build — verified by our team. This keeps capital moving to your project as progress is made.</div>
-        </div>
+<h3>Assignment restrictions</h3>
+<p>Many contracts, bank-owned deals, and some end buyers do not allow you to assign your contract to another party. A double close is a clean, fully legal alternative. You are not assigning anything. You are buying and then selling, two real transactions.</p>
 
-        <div class="reassure">Interest only · No prepayment penalty · LLC-friendly</div>
-      </div>
+<h3>Protecting your spread and your privacy</h3>
+<p>When you assign a contract, your assignment fee is visible on the closing statement. Everyone at the table sees exactly what you are making. With a double close, the seller sees their price, the buyer sees their price, and your margin stays your business. If your spread is large, this alone is worth it.</p>
 
-      <div class="reveal">
-        <div class="info-grid">
-          <div class="info-cell">
-            <div class="info-cell-label">Loan Amounts</div>
-            <div class="info-cell-val">Up to $5M</div>
-            <div class="info-cell-sub">No minimum</div>
-          </div>
-          <div class="info-cell">
-            <div class="info-cell-label">Interest Rate</div>
-            <div class="info-cell-val">9–11%</div>
-            <div class="info-cell-sub">Interest only</div>
-          </div>
-          <div class="info-cell">
-            <div class="info-cell-label">Points (Origination)</div>
-            <div class="info-cell-val">2%+</div>
-            <div class="info-cell-sub">Starting at 2%</div>
-          </div>
-          <div class="info-cell">
-            <div class="info-cell-label">Loan Term</div>
-            <div class="info-cell-val">12–24mo</div>
-            <div class="info-cell-sub">Extensions available</div>
-          </div>
-          <div class="info-cell">
-            <div class="info-cell-label">Max LTC</div>
-            <div class="info-cell-val">90%</div>
-            <div class="info-cell-sub">Of total project cost</div>
-          </div>
-          <div class="info-cell">
-            <div class="info-cell-label">Max LTV</div>
-            <div class="info-cell-val">70%</div>
-            <div class="info-cell-sub">Loan-to-value</div>
-          </div>
-          <div class="info-cell">
-            <div class="info-cell-label">Min Credit Score</div>
-            <div class="info-cell-val">660</div>
-            <div class="info-cell-sub">FICO required</div>
-          </div>
-          <div class="info-cell">
-            <div class="info-cell-label">Geography</div>
-            <div class="info-cell-val">Nationwide</div>
-            <div class="info-cell-sub">All states except SD and ND</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<h3>Keeping your own capital free</h3>
+<p>Even a well-funded investor has better uses for their money than parking it in a deal that will resell in hours. Using transactional funding means your cash stays available for earnest money, marketing, rehab projects, or the next opportunity. You are renting the capital for a day instead of committing it.</p>
 
-<div class="section-divider"></div>
+<h2>When to use it</h2>
+<p>Transactional funding is the right tool when all of these are true:</p>
+<ul>
+<li>You have a property under contract to buy, and a separate buyer under contract to purchase it from you at a higher price.</li>
+<li>Both closings can happen close together, ideally the same day or within a day or two.</li>
+<li>Your end buyer has their funds ready, whether that is their own cash or a lender who is cleared to fund.</li>
+<li>You want to avoid an assignment, keep your margin private, or simply not use your own money.</li>
+</ul>
+<p>It is not the right tool for a long hold, a rehab, or a deal where your buyer is still weeks from being ready. Those call for different products, like a <a class="inline" href="./what-is-a-hard-money-loan.html">hard money loan</a>. Transactional funding is built for speed and for deals that are already lined up on both ends.</p>
 
-<!-- ============ HOW IT WORKS ============ -->
-<section class="process" id="how-it-works">
-  <div class="container">
-    <div class="process-head reveal">
-      <div class="eyebrow">How It Works</div>
-      <h2 class="section-title">From Application<br><em>to Certificate of Occupancy.</em></h2>
-      <p class="section-sub">The same proven 6-step process as our rehab loans — built for the longer timeline and milestone-based nature of ground-up construction.</p>
-    </div>
+<h2>How it works, step by step</h2>
+<div class="steps">
+<div class="step"><div class="step-num"></div><div><h3>You submit the deal</h3><p>You send over the basics: the property, your purchase price, your resale price, the closing date, and the title company handling the transaction. There is no credit check and no income verification.</p></div></div>
+<div class="step"><div class="step-num"></div><div><h3>We review and confirm the docs</h3><p>We confirm the deal is real and the paperwork is in order on both legs, the A to B side and the B to C side. Clean docs are what protect everyone, so we fund only when both closings are ready to go.</p></div></div>
+<div class="step"><div class="step-num"></div><div><h3>We wire the A to B funds</h3><p>We send the money to the title company to fund your purchase from the original seller. You now own the property. At Key Partners Funding this can happen in as little as 24 hours, with no money out of your pocket.</p></div></div>
+<div class="step"><div class="step-num"></div><div><h3>Both closings complete</h3><p>The A to B closing records, then the B to C closing records. Your end buyer's payment comes in, and the funding we advanced is repaid directly from those proceeds at the table.</p></div></div>
+<div class="step"><div class="step-num"></div><div><h3>You keep the spread</h3><p>After the funding is repaid and the small transactional fee is covered, the difference between your buy price and your sell price is your profit. You never touched your own capital.</p></div></div>
+</div>
 
-    <div class="process-grid">
-      <div class="reveal">
-        <div class="callout">
-          <div class="callout-title">What We Underwrite</div>
-          <ul class="callout-list">
-            <li>The land / lot value</li>
-            <li>Your construction budget and scope</li>
-            <li>Completed value (ARV / appraised value after build)</li>
-            <li>Your experience as a builder or developer</li>
-            <li>Credit (660 minimum FICO)</li>
-          </ul>
-        </div>
-      </div>
+<h2>What it costs</h2>
+<p>Transactional funding is priced as a flat fee for the use of the capital, not as a long-term interest rate, because the money is only out for a day. There is no interest clock running for months, no points structured like a rehab loan, and no cost at all if the deal never closes.</p>
+<p>At Key Partners Funding the structure is simple. We fund 100% of the A to B purchase price, there is no minimum and we go up to $1,000,000, there are no upfront fees, and there is no credit check or income documentation. If your deal falls through before closing, you pay nothing.</p>
 
-      <div class="process-steps reveal">
-        <div class="process-step">
-          <div class="process-num">01</div>
-          <div>
-            <div class="process-title">Apply</div>
-            <div class="process-desc">Submit our application or request a quote. Include your lot address, project scope, construction budget, and expected completed value. Our team will begin reviewing right away.</div>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="process-num">02</div>
-          <div>
-            <div class="process-title">Process</div>
-            <div class="process-desc">Once we confirm it's a good fit, we'll request additional information to begin underwriting — plans, permits if available, builder credentials, and comparable sales.</div>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="process-num">03</div>
-          <div>
-            <div class="process-title">Underwrite</div>
-            <div class="process-desc">We confirm the deal economics — lot value, construction costs, and projected completed value — and review your scope of work to align our estimates with yours.</div>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="process-num">04</div>
-          <div>
-            <div class="process-title">Fund</div>
-            <div class="process-desc">Tell us your start date and we'll have loan documents ready. Initial advance covers land acquisition and early-stage costs. You break ground.</div>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="process-num">05</div>
-          <div>
-            <div class="process-title">Construction Draws</div>
-            <div class="process-desc">Interest-only monthly payments on the drawn balance. As you hit construction milestones, we release additional draw funds — keeping pace with your project.</div>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="process-num">06</div>
-          <div>
-            <div class="process-title">Repay</div>
-            <div class="process-desc">Once the project is complete and you sell or refinance into permanent financing, we issue a payoff to your title company. No prepayment penalty — you keep all the upside.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="keytakeaways">
+<span class="callout-label">Key takeaways</span>
+<ul>
+<li>Transactional funding pays for the A to B leg of a same-day double close, then gets repaid from the B to C sale.</li>
+<li>Use it to close deals you cannot assign, to keep your margin private, and to avoid using your own cash.</li>
+<li>It only fits deals that are already lined up on both ends and can close back to back.</li>
+<li>Priced as a flat fee, funded in as little as 24 hours, and free if the deal does not close.</li>
+</ul>
+</div>
 
-<div class="section-divider"></div>
-
-<!-- ============ FAQ ============ -->
-<section class="faq" id="faq">
-  <div class="container">
-    <div class="faq-head reveal">
-      <div class="eyebrow">FAQ</div>
-      <h2 class="section-title">Construction Loan<br><em>Questions Answered.</em></h2>
-    </div>
-
-    <div class="faq-list reveal">
-      <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>What types of projects qualify?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">Our new construction loans are designed for ground-up residential construction — single-family homes and small multifamily (2–4 units) being built from scratch. The property must be a non-owner-occupied investment project. Contact us to discuss larger or commercial projects.</div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Do I need to own the land already?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">Not necessarily — we can structure the loan to include land acquisition as part of the project cost. If you already own the lot free and clear, that equity counts toward your LTV. Either way, let us know your situation and we'll structure accordingly.</div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>How are construction draws handled?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">Draws are released as you complete different stages of construction and we verify the work. You pay interest only on the amount drawn — not on the full loan commitment. This keeps your carrying costs lower while the project is being built.</div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>What states do you lend in?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">We lend nationwide except for South Dakota (SD) and North Dakota (ND). New construction financing is available across Tennessee and the broader Southeast, as well as most other states.</div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Is there a minimum credit score?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">Yes — we require a 660 minimum FICO score for new construction loans. Builder experience and project economics are also heavily weighted in our underwriting decision.</div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Can I close in an LLC or entity?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">Yes. We work with LLCs, corporations, and other entities regularly. A personal guarantee from the principal member is typically required. Building in an entity is smart for liability protection and we have no issues with it.</div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Is there a prepayment penalty?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">No. There is no prepayment penalty on our new construction loans. When your project is complete and you're ready to sell or refinance, you pay off the loan and you're done — no exit fees.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ APPLY ============ -->
-<section class="apply" id="apply">
-  <div class="container">
-    <div class="apply-grid">
-      <div class="reveal">
-        <div class="eyebrow">Apply</div>
-        <h2 class="section-title">Ready to Break<br><em>Ground?</em></h2>
-        <p class="section-sub">Get a quote on your construction project. The more detail you can share about your scope and budget, the faster we can get you a decision.</p>
-
-        <div class="time-sensitive">
-          <div class="time-sensitive-title">Let's Talk Through Your Project</div>
-          <div class="time-sensitive-body">Call <a href="tel:6159796260">615-979-6260</a> — construction projects have a lot of moving parts and sometimes a quick call is the fastest way to determine if we're a fit.</div>
-        </div>
-
-        <div class="cross-sell">
-          <a href="./rehab-loans.html" class="btn btn-outline-gold">Rehab Loans <span class="arrow">→</span></a>
-          <a href="./dscr.html" class="btn btn-outline-gold">DSCR Loans <span class="arrow">→</span></a>
-        </div>
-      </div>
-
-      <div class="reveal">
-        <div class="form-card">
-          <div id="nc-success" class="form-success">
-            <div class="form-success-mark">✓</div>
-            <div class="form-success-title">Request Submitted</div>
-            <div class="form-success-sub">We'll review your project and reach out shortly. Call <a href="tel:6159796260" style="color:var(--gold-deep);">615-979-6260</a> to talk through the details.</div>
-          </div>
-          <div id="nc-fields">
-            <div class="form-title">Get a Quote</div>
-            <div class="form-sub">New construction loan inquiry</div>
-            <form name="kpf-construction" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit_nc(event)">
-              <input type="hidden" name="form-name" value="kpf-construction">
-              <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
-              <div class="form-row">
-                <div class="form-group"><label>First Name</label><input type="text" name="first-name" placeholder="John" required></div>
-                <div class="form-group"><label>Last Name</label><input type="text" name="last-name" placeholder="Smith" required></div>
-              </div>
-              <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="john@email.com" required></div>
-              <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="615-000-0000" required></div>
-              <div class="form-group"><label>Project Address / Lot Location</label><input type="text" name="property" placeholder="123 Main St, Nashville, TN" required></div>
-              <div class="form-row">
-                <div class="form-group"><label>Land / Lot Value</label><input type="text" name="land-value" placeholder="$80,000"></div>
-                <div class="form-group"><label>Construction Budget</label><input type="text" name="construction-budget" placeholder="$220,000" required></div>
-              </div>
-              <div class="form-row">
-                <div class="form-group"><label>Expected Completed Value</label><input type="text" name="completed-value" placeholder="$420,000"></div>
-                <div class="form-group"><label>Credit Score (approx.)</label><input type="text" name="credit-score" placeholder="700"></div>
-              </div>
-              <div class="form-group">
-                <label>Do You Own the Lot?</label>
-                <select name="own-lot">
-                  <option value="">Select</option>
-                  <option>Yes — free and clear</option>
-                  <option>Yes — with existing mortgage</option>
-                  <option>No — need to acquire</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Planned Exit</label>
-                <select name="exit-strategy" required>
-                  <option value="">How do you plan to exit?</option>
-                  <option>Sell upon completion</option>
-                  <option>Refinance into permanent financing</option>
-                  <option>Hold as rental — DSCR refi</option>
-                </select>
-              </div>
-              <div class="form-group"><label>Project Description</label><textarea name="notes" placeholder="Number of units, square footage, builder experience, expected start date, any other details..." required></textarea></div>
-              <button type="submit" class="form-submit">Get a Quote →</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<h2>Common questions</h2>
+<h3>Do I need good credit?</h3>
+<p>No. Transactional funding is secured by the deal itself, not your credit profile. We do not run credit or verify income.</p>
+<h3>What if my buyer backs out?</h3>
+<p>If the B to C closing does not happen, the funding does not get advanced, and you owe nothing. We fund only when both sides are ready.</p>
+<h3>How fast can you fund?</h3>
+<p>As little as 24 hours once the deal and documents are confirmed. Send it early and clean and it moves fast.</p>
+</article></div></section>
+<section class="article-wrap" style="padding-top:8px;"><div class="container"><div class="article-cta reveal"><h2>Have a double close on the calendar?</h2><p>Send us the details. We fund 100% of the A-B purchase, in as little as 24 hours, with no credit check and no upfront fees.</p><div class="cta-btns"><a href="./index.html#apply" class="btn btn-gold">Submit Your Deal <span class="arrow">&rarr;</span></a><a href="tel:6159796260" class="btn btn-secondary" style="color:var(--cream);border-color:rgba(255,255,255,.4);">Call 615-979-6260</a></div></div></div></section>
+<section class="related"><div class="container"><div class="eyebrow">Keep Reading</div><h2 class="section-title" style="font-size:clamp(26px,3vw,38px);">More for <em>investors</em></h2><div class="related-grid"><a href="./what-is-a-hard-money-loan.html" class="related-card reveal"><span class="rc-tag">Hard Money 101</span><h3>What Is a Hard Money Loan?</h3><p>The asset-based, close-in-days loan built for investors, not W-2 borrowers. How it works and what it costs.</p></a><a href="./hard-money-helps-investors-scale.html" class="related-card reveal"><span class="rc-tag">Strategy</span><h3>Why Hard Money Helps Investors Scale</h3><p>Leverage and speed turn one deal a year into several. The math behind doing more with the same cash.</p></a><a href="./hard-money-dscr-brrrr.html" class="related-card reveal"><span class="rc-tag">BRRRR</span><h3>Hard Money + DSCR for BRRRR</h3><p>Two loans, one repeatable engine: buy and rehab with hard money, refinance with DSCR, recycle your capital.</p></a></div></div></section>
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="footer-inner">
@@ -1390,64 +1221,29 @@
     </div>
   </div>
 </footer>
-
-<!-- ============ FLOATING BAR ============ -->
+<!-- floating bar -->
 <div id="floating-bar">
-  <span class="float-text">Ready to break ground?</span>
+  <span class="float-text">Have a deal to fund?</span>
   <div class="float-btns">
     <a href="tel:6159796260" class="float-phone">615-979-6260</a>
-    <a href="#apply" class="float-cta" onclick="document.getElementById('floating-bar').style.display='none'">Get a Quote →</a>
+    <a href="./index.html#apply" class="float-cta">Submit Deal &rarr;</a>
     <button class="float-close" onclick="document.getElementById('floating-bar').style.display='none'">&times;</button>
   </div>
 </div>
-
 <script>
-  async function handleSubmit_nc(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-    try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString()
-      });
-    } catch (err) { /* Netlify still captures in production */ }
-    const params = new URLSearchParams({
-      first_name: data.get('first-name') || '',
-      product: 'new-construction'
-    });
-    window.location.href = './thank-you.html?' + params.toString();
-  }
-  // Prefill basic info from URL params (when arriving from homepage lead form)
-  (function () {
-    const params = new URLSearchParams(window.location.search);
-    const fields = { 'first_name': 'first-name', 'last_name': 'last-name', 'email': 'email', 'phone': 'phone' };
-    Object.keys(fields).forEach(function (key) {
-      const val = params.get(key);
-      if (!val) return;
-      const input = document.querySelector('input[name="' + fields[key] + '"]');
-      if (input) input.value = val;
-    });
-  })();
-
-
   const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.01, rootMargin: '0px 0px -20px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.remove('open');
+  // fallback: never let a .reveal stay hidden (e.g. tall or above-fold blocks)
+  window.addEventListener('load', () => setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.in)').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight) el.classList.add('in');
     });
-  });
+  }, 300));
+  const t = document.querySelector('.nav-toggle');
+  if (t) t.addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('open'));
 </script>
-
 </body>
 </html>
