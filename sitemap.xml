@@ -1,44 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://keypartnersfunding.com/</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-08-10</lastmod>
     <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://keypartnersfunding.com/rehab-loans.html</loc>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-10</lastmod>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://keypartnersfunding.com/new-construction.html</loc>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-10</lastmod>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://keypartnersfunding.com/dscr.html</loc>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-10</lastmod>
     <priority>0.9</priority>
   </url>
-
+  <url>
+    <loc>https://keypartnersfunding.com/learn.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://keypartnersfunding.com/privacy-policy.html</loc>
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-08-10</lastmod>
     <priority>0.3</priority>
   </url>
-
   <url>
     <loc>https://keypartnersfunding.com/terms-of-service.html</loc>
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-08-10</lastmod>
     <priority>0.3</priority>
   </url>
-
-  <url><loc>https://keypartnersfunding.com/learn.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://keypartnersfunding.com/what-is-a-hard-money-loan.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://keypartnersfunding.com/hard-money-helps-investors-scale.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://keypartnersfunding.com/hard-money-dscr-brrrr.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://keypartnersfunding.com/monthly-holding-costs-house-flip.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://keypartnersfunding.com/dscr-prepayment-penalty-step-down.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://keypartnersfunding.com/dscr-loan-closing-costs-and-fees.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://keypartnersfunding.com/points-vs-rate-on-a-flip-loan.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://keypartnersfunding.com/dscr-loan-llc-requirement.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://keypartnersfunding.com/hard-money-vs-conventional-investment-property.html</loc>
+    <lastmod>2026-08-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://keypartnersfunding.com/how-to-calculate-dscr-rental-property.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://keypartnersfunding.com/what-is-a-hard-money-loan.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://keypartnersfunding.com/hard-money-helps-investors-scale.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://keypartnersfunding.com/hard-money-dscr-brrrr.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <priority>0.7</priority>
+  </url>
 </urlset>
