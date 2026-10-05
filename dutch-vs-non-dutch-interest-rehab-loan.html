@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dutch vs. Non-Dutch Interest: How Interest Is Really Charged on a Rehab Loan | Key Partners Funding</title>
+<meta name="description" content="Two rehab loans with the same rate can cost different amounts. See how Dutch and non-Dutch interest work, the math on a real flip, and how to spot each one.">
+<link rel="canonical" href="https://keypartnersfunding.com/dutch-vs-non-dutch-interest-rehab-loan.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dutch vs. Non-Dutch Interest: How Interest Is Really Charged on a Rehab Loan">
+<meta property="og:description" content="Two rehab loans with the same rate can cost different amounts. See how Dutch and non-Dutch interest work, the math on a real flip, and how to spot each one.">
+<meta property="og:url" content="https://keypartnersfunding.com/dutch-vs-non-dutch-interest-rehab-loan.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Dutch vs. Non-Dutch Interest: How Interest Is Really Charged on a Rehab Loan","description":"Two rehab loans with the same rate can cost different amounts. See how Dutch and non-Dutch interest work, the math on a real flip, and how to spot each one.","author":{"@type":"Organization","name":"Key Partners Funding"},"publisher":{"@type":"Organization","name":"Key Partners Funding"},"mainEntityOfPage":"https://keypartnersfunding.com/dutch-vs-non-dutch-interest-rehab-loan.html"}</script>
+
+<style>
+  /* =========================
+     TOKENS
+     ========================= */
+  :root {
+    --cream:        #F8F4ED;
+    --cream-deep:   #F0E9DC;
+    --paper:        #FBF8F2;
+    --navy:         #0D1B2A;
+    --navy-mid:     #162436;
+    --navy-soft:    #1E3148;
+    --gold:         #C89B3C;
+    --gold-bright:  #E8B84B;
+    --gold-deep:    #A88130;
+    --ink:          #1F2937;
+    --ink-muted:    #5C6470;
+    --ink-soft:     #8B8378;
+    --rule:         #D9CFB8;
+    --rule-soft:    #E8DFCB;
+    --display:      'Fraunces', Georgia, 'Times New Roman', serif;
+    --body:         'DM Sans', system-ui, -apple-system, sans-serif;
+    --container:    1280px;
+    --section-pad:  clamp(32px, 4.5vw, 60px);
+  }
+
+  /* =========================
+     RESET / BASE
+     ========================= */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+  body {
+    font-family: var(--body);
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+  .container { max-width: var(--container); margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px); }
+
+  /* =========================
+     SHARED PRIMITIVES
+     ========================= */
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--gold-deep); margin-bottom: 14px;
+  }
+  .eyebrow::before { content: ''; width: 28px; height: 1.5px; background: var(--gold); }
+
+  .section-title {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(34px, 4.6vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    color: var(--navy);
+  }
+  .section-title em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--gold-deep);
+  }
+  .section-sub {
+    font-size: 17px;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    max-width: 620px;
+    margin-top: 12px;
+  }
+
+  .section-divider {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 56px);
+    position: relative;
+  }
+  .section-divider::before {
+    content: ''; display: block; height: 1px; background: var(--rule);
+  }
+  .section-divider::after {
+    content: '';
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 7px; height: 7px;
+    background: var(--cream);
+    border: 1px solid var(--gold);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px; border-radius: 4px;
+    font-family: var(--body); font-size: 14px;
+    font-weight: 600; letter-spacing: 0.3px;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--navy); color: var(--cream); }
+  .btn-primary:hover { background: var(--navy-mid); box-shadow: 0 6px 24px -8px rgba(13,27,42,0.3); }
+  .btn-secondary { background: transparent; color: var(--navy); border-color: var(--navy); }
+  .btn-secondary:hover { background: var(--navy); color: var(--cream); }
+  .btn-gold { background: var(--gold); color: var(--navy); }
+  .btn-gold:hover { background: var(--gold-bright); }
+  .btn-outline-gold {
+    background: transparent; color: var(--navy);
+    border: 1px solid var(--gold); padding: 12px 22px; font-size: 13px;
+  }
+  .btn-outline-gold:hover { background: var(--gold); }
+  .btn .arrow { font-family: var(--body); transition: transform 0.25s ease; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* Photo slots */
+  .photo-slot {
+    background: var(--cream-deep);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--rule);
+  }
+  .photo-slot::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border: 1px dashed rgba(200,155,60,0.45);
+    pointer-events: none;
+  }
+  .photo-slot::after {
+    content: '';
+    position: absolute;
+    top: 16px; right: 16px;
+    width: 8px; height: 8px;
+    border-top: 1px solid var(--gold);
+    border-right: 1px solid var(--gold);
+  }
+  .photo-slot-label { text-align: center; padding: 24px; z-index: 1; }
+  .photo-slot-id {
+    font-family: var(--display); font-style: italic;
+    font-size: 13px; color: var(--gold-deep); margin-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+  .photo-slot-desc {
+    font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--ink-muted); line-height: 1.6; max-width: 240px; margin: 0 auto;
+  }
+
+  /* Callout boxes */
+  .callout {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--gold);
+    padding: 24px 28px;
+    margin-top: 28px;
+  }
+  .callout-title {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--navy);
+    margin-bottom: 14px;
+    letter-spacing: 0.1px;
+  }
+  .callout ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .callout li {
+    font-size: 14.5px;
+    color: var(--ink-muted);
+    line-height: 1.6;
+    padding-left: 22px;
+    position: relative;
+  }
+  .callout li::before {
+    content: '';
+    position: absolute;
+    top: 9px; left: 0;
+    width: 12px; height: 1px;
+    background: var(--gold);
+  }
+  .callout-note {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule-soft);
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-family: var(--display);
+  }
+
+  /* Note line (light reassurance) */
+  .reassure {
+    margin-top: 20px;
+    padding: 14px 20px;
+    background: rgba(200,155,60,0.08);
+    border: 1px solid rgba(200,155,60,0.25);
+    font-size: 13.5px;
+    color: var(--gold-deep);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .reassure::before {
+    content: '';
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* =========================
+     NAV
+     ========================= */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(248,244,237,0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 56px);
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; }
+  .nav-logo-mark {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+    border-radius: 4px;
+  }
+  .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .nav-logo-name { font-family: var(--display); font-weight: 700; font-size: 17px; color: var(--navy); }
+  .nav-logo-sub { font-size: 9.5px; color: var(--ink-muted); letter-spacing: 2.2px; text-transform: uppercase; font-weight: 500; margin-top: 2px; }
+
+  .nav-links { display: flex; align-items: center; gap: 32px; }
+  .nav-links a {
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+    position: relative;
+  }
+  .nav-links a:hover { color: var(--gold-deep); }
+  .nav-links a.active { color: var(--gold-deep); }
+  .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0; right: 0;
+    height: 1.5px;
+    background: var(--gold);
+  }
+
+  .nav-services { position: relative; }
+  .nav-services > a { display: inline-flex; align-items: center; gap: 4px; }
+  .nav-dropdown {
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-4px);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 6px;
+    min-width: 240px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    box-shadow: 0 12px 32px -16px rgba(13,27,42,0.18);
+  }
+  .nav-services:hover .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+  .nav-dropdown a {
+    display: block;
+    padding: 11px 16px;
+    color: var(--ink) !important;
+    font-size: 14px;
+    border-radius: 2px;
+    transition: all 0.15s;
+  }
+  .nav-dropdown a.active {
+    color: var(--gold-deep) !important;
+    background: rgba(200,155,60,0.08);
+  }
+  .nav-dropdown a:hover {
+    background: var(--cream-deep);
+    color: var(--navy) !important;
+  }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 10px 22px;
+    font-weight: 600 !important;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--gold-bright); }
+
+  .nav-toggle { display: none; }
+
+  /* =========================
+     HERO
+     ========================= */
+  .hero {
+    padding-top: calc(84px + var(--section-pad));
+    padding-bottom: var(--section-pad);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(200,155,60,0.1);
+    border: 1px solid rgba(200,155,60,0.35);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+  }
+  .hero-badge-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(48px, 7.2vw, 92px);
+    line-height: 0.98;
+    letter-spacing: -1.5px;
+    color: var(--navy);
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--gold-deep);
+  }
+  .hero-sub {
+    margin-top: 18px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink-muted);
+    max-width: 560px;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+  }
+  .hero-photo {
+    aspect-ratio: 4/5;
+    width: 100%;
+  }
+  img.hero-photo {
+    object-fit: cover;
+    display: block;
+    border: 1px solid var(--rule);
+  }
+
+  /* =========================
+     TRUST BAR
+     ========================= */
+  .trust-bar {
+    background: var(--navy);
+    padding: 22px 0;
+    border-top: 1px solid var(--navy-mid);
+    border-bottom: 1px solid var(--navy-mid);
+  }
+  .trust-bar-inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 56px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px 28px;
+  }
+  .trust-item {
+    color: #E8DFCB;
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .trust-item:not(:last-child)::after {
+    content: '';
+    width: 4px; height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  /* =========================
+     WHAT IS IT
+     ========================= */
+  .what-is { padding: var(--section-pad) 0; }
+  .what-is-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+  }
+  .what-is-body p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--ink-muted);
+    line-height: 1.75;
+  }
+
+  /* Info grid — 2x3 layout, hairline rules */
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
+  }
+  .info-cell {
+    padding: 28px 24px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+  }
+  .info-cell-label {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 12px;
+  }
+  .info-cell-val {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--navy);
+    line-height: 1;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+  .info-cell-sub {
+    font-size: 12.5px;
+    color: var(--ink-muted);
+    line-height: 1.55;
+  }
+
+  /* =========================
+     PROCESS (vertical 5-step)
+     ========================= */
+  .process { padding: var(--section-pad) 0; }
+  .process-head {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .process-head .eyebrow { justify-content: center; }
+  .process-head .section-sub { margin: 12px auto 0; }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+  }
+
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+  .process-step {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 28px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    position: relative;
+  }
+  .process-step:first-child { padding-top: 0; }
+  .process-step:last-child { border-bottom: none; }
+  .process-num {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 1px solid var(--gold);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .process-title {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.25;
+  }
+  .process-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink-muted);
+  }
+
+  /* =========================
+     FAQ
+     ========================= */
+  .faq { padding: var(--section-pad) 0; }
+  .faq-head {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .faq-head .eyebrow { justify-content: center; }
+  .faq-list {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--rule);
+  }
+  .faq-item:first-child {
+    border-top: 1px solid var(--rule);
+  }
+  .faq-q {
+    width: 100%;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: var(--navy);
+    font-family: var(--display);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.3;
+    transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--gold-deep); }
+  .faq-icon {
+    width: 28px; height: 28px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-deep);
+    font-size: 16px;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+  }
+  .faq-item.open .faq-icon {
+    transform: rotate(45deg);
+    background: var(--gold);
+    color: var(--navy);
+  }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  .faq-item.open .faq-a { max-height: 600px; }
+  .faq-a-inner {
+    padding: 0 0 28px;
+    font-size: 15.5px;
+    color: var(--ink-muted);
+    line-height: 1.75;
+    max-width: 760px;
+  }
+  .faq-a-inner a {
+    color: var(--gold-deep);
+    border-bottom: 1px solid rgba(168,129,48,0.4);
+    transition: all 0.2s;
+  }
+  .faq-a-inner a:hover {
+    color: var(--navy);
+    border-bottom-color: var(--navy);
+  }
+
+  /* =========================
+     APPLY
+     ========================= */
+  .apply { padding: var(--section-pad) 0; }
+  .apply-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+  }
+
+  .time-sensitive {
+    margin-top: 36px;
+    padding: 24px 28px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--gold);
+  }
+  .time-sensitive-title {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .time-sensitive-body {
+    font-size: 14.5px;
+    color: var(--ink-muted);
+    line-height: 1.7;
+  }
+  .time-sensitive-body a {
+    color: var(--gold-deep);
+    font-weight: 600;
+    border-bottom: 1px solid rgba(168,129,48,0.4);
+    transition: all 0.2s;
+  }
+  .time-sensitive-body a:hover { color: var(--navy); border-bottom-color: var(--navy); }
+
+  .cross-sell {
+    margin-top: 32px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* Form */
+  .form-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 40px;
+  }
+  .form-title {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 26px;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .form-sub {
+    font-size: 14px;
+    color: var(--ink-muted);
+    margin-bottom: 32px;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .form-group label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 12px 14px;
+    font-family: var(--body);
+    font-size: 14px;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    border-radius: 2px;
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: var(--ink-soft); }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+  .form-group select { cursor: pointer; }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-submit {
+    width: 100%;
+    padding: 16px;
+    background: var(--navy);
+    color: var(--cream);
+    border: none;
+    font-family: var(--body);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+    border-radius: 2px;
+  }
+  .form-submit:hover { background: var(--navy-mid); }
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 48px 24px;
+  }
+  .form-success-mark {
+    width: 56px; height: 56px;
+    margin: 0 auto 20px;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-deep);
+    font-family: var(--display);
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .form-success-title {
+    font-family: var(--display);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .form-success-sub {
+    font-size: 14px;
+    color: var(--ink-muted);
+    line-height: 1.7;
+  }
+
+  /* =========================
+     FOOTER
+     ========================= */
+  footer {
+    background: var(--navy);
+    color: #CBD5E1;
+    padding: 72px 0 32px;
+  }
+  .footer-inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 56px);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: clamp(32px, 5vw, 56px);
+    margin-bottom: 48px;
+  }
+  .footer-brand-name {
+    font-family: var(--display);
+    font-size: 22px; font-weight: 700;
+    color: white; margin-bottom: 14px;
+  }
+  .footer-tag {
+    font-size: 14px; line-height: 1.7;
+    max-width: 320px; color: #B7BFCC;
+  }
+  .footer-contact {
+    margin-top: 20px;
+    font-size: 13.5px; line-height: 1.75;
+    color: #94A3B8;
+  }
+  .footer-contact a { color: var(--gold-bright); transition: color 0.2s; }
+  .footer-contact a:hover { color: var(--gold-light); }
+  .footer-col-title {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 16px;
+  }
+  .footer-links { display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a {
+    font-size: 14px; color: #B7BFCC;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold-bright); }
+  .footer-disclaimer {
+    margin-top: 20px;
+    font-size: 12px; color: #6B7889;
+    line-height: 1.65;
+  }
+  .footer-bottom {
+    padding-top: 28px;
+    border-top: 1px solid var(--navy-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 12.5px;
+    color: #6B7889;
+  }
+  .footer-bottom a { color: #94A3B8; }
+  .footer-bottom a:hover { color: var(--gold-bright); }
+  .footer-bottom-links { display: flex; gap: 22px; }
+
+  /* =========================
+     FLOATING BAR
+     ========================= */
+  #floating-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 90;
+    background: rgba(248,244,237,0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--rule);
+    padding: 14px clamp(16px, 4vw, 32px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    transition: transform 0.3s ease;
+  }
+  .float-text {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--navy);
+  }
+  .float-btns { display: flex; align-items: center; gap: 12px; }
+  .float-phone {
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 1px;
+    transition: color 0.2s;
+  }
+  .float-phone:hover { color: var(--gold-deep); }
+  .float-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .float-cta:hover { background: var(--gold-bright); }
+  .float-close {
+    color: var(--ink-muted);
+    font-size: 22px;
+    line-height: 1;
+    padding: 0 6px;
+    transition: color 0.2s;
+  }
+  .float-close:hover { color: var(--navy); }
+
+  body { padding-bottom: 72px; }
+
+  /* =========================
+     REVEAL ANIMATIONS
+     ========================= */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* =========================
+     RESPONSIVE
+     ========================= */
+  @media (max-width: 960px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-photo { aspect-ratio: 4/3; max-height: 480px; }
+
+    .what-is-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr; }
+    .apply-grid { grid-template-columns: 1fr; }
+
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+
+    .nav-links { display: none; position: absolute; top: 84px; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--rule); flex-direction: column; padding: 20px 5%; gap: 16px; align-items: stretch; }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 8px 0; }
+    .nav-links a.active::after { display: none; }
+    .nav-services { width: 100%; }
+    .nav-dropdown { position: static; transform: none; opacity: 1; visibility: visible; box-shadow: none; border: none; padding: 0 0 0 16px; min-width: 0; }
+    .nav-dropdown a { padding: 6px 0; }
+    .nav-cta { text-align: center; padding: 12px 22px; }
+
+    .nav-toggle {
+      display: flex; flex-direction: column; gap: 4px;
+      padding: 8px; background: none; border: none; cursor: pointer;
+    }
+    .nav-toggle span {
+      width: 22px; height: 1.5px;
+      background: var(--navy); transition: all 0.2s;
+    }
+
+    #floating-bar { flex-wrap: wrap; }
+    .float-text { display: none; }
+    .float-btns { width: 100%; justify-content: center; }
+  }
+
+  @media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+    .info-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .form-card { padding: 28px 24px; }
+    .trust-bar-inner { gap: 10px 18px; }
+    .trust-item { gap: 18px; font-size: 12.5px; }
+    .process-step { grid-template-columns: 1fr; gap: 16px; }
+    .process-num { margin-bottom: 4px; }
+  }
+</style>
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="./favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Key Partners Funding">
+  <meta property="og:image" content="https://keypartnersfunding.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://keypartnersfunding.com/og-image.png">
+
+<style>
+  /* ---- article layout ---- */
+  .article-hero { background: var(--navy); color: var(--cream); padding: clamp(64px,9vw,120px) 0 clamp(40px,5vw,64px); position: relative; }
+  .article-hero .eyebrow { color: var(--gold-bright); }
+  .article-hero .eyebrow::before { background: var(--gold-bright); }
+  .article-hero h1 { font-family: var(--display); font-weight: 600; font-size: clamp(34px,5vw,60px); line-height: 1.05; letter-spacing: -0.5px; max-width: 15ch; }
+  .article-hero h1 em { font-style: italic; font-weight: 400; color: var(--gold-bright); }
+  .article-hero .lede { font-size: clamp(17px,1.5vw,20px); color: #C9D2DC; line-height: 1.6; max-width: 60ch; margin-top: 20px; }
+  .article-meta { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 28px; font-size: 13px; color: #9FB0C0; letter-spacing: 0.3px; }
+  .article-meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .article-meta span::before { content: ''; width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); }
+
+  .article-wrap { padding: clamp(48px,6vw,84px) 0 clamp(32px,4vw,56px); }
+  .prose { max-width: 720px; margin: 0 auto; }
+  .prose h2 { font-family: var(--display); font-weight: 600; font-size: clamp(26px,3vw,36px); line-height: 1.15; color: var(--navy); letter-spacing: -0.3px; margin: 52px 0 16px; }
+  .prose h2:first-child { margin-top: 0; }
+  .prose h3 { font-family: var(--display); font-weight: 600; font-size: 21px; color: var(--navy); letter-spacing: -0.2px; margin: 34px 0 10px; }
+  .prose p { font-size: 17px; line-height: 1.75; color: var(--ink); margin-bottom: 18px; }
+  .prose ul, .prose ol { margin: 0 0 20px 2px; padding-left: 22px; }
+  .prose li { font-size: 17px; line-height: 1.7; color: var(--ink); margin-bottom: 9px; }
+  .prose li::marker { color: var(--gold-deep); }
+  .prose strong { font-weight: 700; color: var(--navy); }
+  .prose a.inline { color: var(--gold-deep); font-weight: 600; box-shadow: inset 0 -1px 0 var(--rule); }
+  .prose a.inline:hover { box-shadow: inset 0 -2px 0 var(--gold); }
+  .prose .lead { font-size: 18.5px; line-height: 1.7; color: var(--ink); font-weight: 500; margin-bottom: 24px; }
+
+  .callout { background: var(--paper); border: 1px solid var(--rule-soft); border-left: 3px solid var(--gold); border-radius: 4px; padding: 22px 26px; margin: 26px 0; }
+  .callout p { margin: 0; font-size: 16px; }
+  .callout .callout-label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 8px; }
+
+  .keytakeaways { background: var(--navy); color: var(--cream); border-radius: 6px; padding: 28px 30px; margin: 30px 0; }
+  .keytakeaways .callout-label { color: var(--gold-bright); display:block; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:14px; }
+  .keytakeaways ul { margin: 0; padding-left: 20px; }
+  .keytakeaways li { color: #DDE4EC; margin-bottom: 10px; }
+  .keytakeaways li::marker { color: var(--gold-bright); }
+
+  .steps { counter-reset: step; margin: 26px 0; }
+  .step { display: grid; grid-template-columns: 44px 1fr; gap: 18px; padding: 18px 0; border-top: 1px solid var(--rule-soft); }
+  .step:last-child { border-bottom: 1px solid var(--rule-soft); }
+  .step-num { counter-increment: step; }
+  .step-num::before { content: counter(step); display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--cream-deep); color: var(--navy); font-family: var(--display); font-weight: 600; font-size: 18px; border: 1px solid var(--rule); }
+  .step h3 { margin: 6px 0 6px; }
+  .step p { margin: 0; font-size: 16px; }
+
+  .cmp { width: 100%; border-collapse: collapse; margin: 26px 0; font-size: 15px; }
+  .cmp th, .cmp td { text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+  .cmp thead th { background: var(--navy); color: var(--cream); font-weight: 600; font-size: 13px; letter-spacing: 0.4px; }
+  .cmp tbody tr:nth-child(even) { background: var(--paper); }
+  .cmp td:first-child { font-weight: 600; color: var(--navy); }
+  .table-scroll { overflow-x: auto; }
+
+  .article-cta { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%); color: var(--cream); border-radius: 8px; padding: clamp(32px,4vw,52px); text-align: center; margin: 8px auto 0; max-width: 860px; }
+  .article-cta h2 { font-family: var(--display); font-weight: 600; font-size: clamp(26px,3vw,38px); color: var(--cream); margin-bottom: 12px; }
+  .article-cta h2 em { font-style: italic; color: var(--gold-bright); font-weight: 400; }
+  .article-cta p { color: #C9D2DC; font-size: 17px; max-width: 52ch; margin: 0 auto 24px; }
+  .article-cta .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  .related { padding: clamp(48px,6vw,80px) 0; background: var(--cream-deep); }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 20px; margin-top: 28px; }
+  .related-card { background: var(--paper); border: 1px solid var(--rule-soft); border-radius: 6px; padding: 24px; transition: all .2s ease; }
+  .related-card:hover { border-color: var(--gold); box-shadow: 0 10px 30px -14px rgba(13,27,42,.25); transform: translateY(-2px); }
+  .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-deep); }
+  .related-card h3 { font-family: var(--display); font-weight: 600; font-size: 20px; color: var(--navy); margin: 10px 0 8px; line-height: 1.2; }
+  .related-card p { font-size: 14.5px; color: var(--ink-muted); line-height: 1.6; margin: 0; }
+
+  /* learn index cards */
+  .learn-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 22px; margin-top: 40px; }
+  .learn-card { display: block; background: var(--paper); border: 1px solid var(--rule-soft); border-radius: 8px; padding: 30px; transition: all .2s ease; }
+  .learn-card:hover { border-color: var(--gold); box-shadow: 0 14px 36px -16px rgba(13,27,42,.3); transform: translateY(-3px); }
+  .learn-card .lc-num { font-family: var(--display); font-size: 15px; color: var(--gold-deep); font-weight: 600; }
+  .learn-card h2 { font-family: var(--display); font-weight: 600; font-size: 23px; color: var(--navy); margin: 12px 0 10px; line-height: 1.2; }
+  .learn-card p { font-size: 15px; color: var(--ink-muted); line-height: 1.65; margin: 0 0 16px; }
+  .learn-card .lc-more { font-size: 13px; font-weight: 700; letter-spacing: 0.4px; color: var(--gold-deep); }
+</style>
+</head>
+<body>
+<!-- ============ NAV ============ -->
+<nav>
+  <div class="nav-inner">
+    <a href="./index.html" class="nav-logo">
+      <img src="./logo-mark.png" alt="Key Partners Funding logo" class="nav-logo-mark">
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">Key Partners Funding</span>
+        <span class="nav-logo-sub">Hard Money Lender · Nationwide</span>
+      </div>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="./index.html">Home</a>
+      <div class="nav-services">
+        <a href="#" onclick="event.preventDefault()" style="display:flex;align-items:center;gap:4px;">Loan Products ▾</a>
+        <div class="nav-dropdown">
+          <a href="./transactional-funding.html">Transactional Funding</a>
+          <a href="./rehab-loans.html">Rehab Loans</a>
+          <a href="./new-construction.html">New Construction</a>
+          <a href="./dscr.html">DSCR Loans</a>
+        </div>
+      </div>
+      <div class="nav-services">
+        <a href="#" onclick="event.preventDefault()" style="display:flex;align-items:center;gap:4px;">Learn ▾</a>
+        <div class="nav-dropdown">
+          <a href="./what-is-transactional-funding.html">What Is Transactional Funding?</a>
+          <a href="./what-is-a-hard-money-loan.html">What Is a Hard Money Loan?</a>
+          <a href="./hard-money-helps-investors-scale.html">Scaling With Hard Money</a>
+          <a href="./hard-money-dscr-brrrr.html">Hard Money + DSCR for BRRRR</a>
+          <a href="./learn.html"><strong>All guides &rarr;</strong></a>
+        </div>
+      </div>
+      <a href="./index.html#about">About</a>
+      <a href="./index.html#apply" class="nav-cta">Apply Now</a>
+    </div>
+  </div>
+</nav>
+<section class="article-hero"><div class="container"><div class="eyebrow">Fix and flip underwriting</div><h1>Dutch vs. Non-Dutch Interest: How Interest Is Really Charged on a Rehab <em>Loan</em></h1><p class="lede">Two rehab loans with the same rate can cost different amounts. See how Dutch and non-Dutch interest work, the math on a real flip, and how to spot each one.</p><div class="article-meta"><span>Key Partners Funding</span><span>8 min read</span><span>Flippers comparing hard money term sheets</span></div></div></section>
+<section class="article-wrap"><div class="container"><article class="prose">
+<p>On a rehab loan, interest is charged one of two ways. Under a Dutch structure, sometimes called full boat, you pay interest on the entire loan amount from the day you close, including renovation money still sitting with the lender. Under a non-Dutch structure, sometimes called interest on drawn funds, you pay interest only on the money that has actually been advanced to you. Same rate, same loan amount, different bill. On a typical six month flip the gap is often one to two thousand dollars, and on a larger or slower project it can be several times that.</p>
+
+<p>Neither structure is a trick. Both are common, and both are legitimate as long as they are disclosed. The problem is that two term sheets with the same rate can cost different amounts, and most borrowers compare the rate and stop. Here is how each one works, with the math, and how to tell which one you are being offered.</p>
+
+<h2>Why the question exists at all</h2>
+
+<p>A fix and flip loan is really two pieces of money under one note.</p>
+
+<ul>
+<li><strong>The initial advance</strong> goes to the closing table and helps you buy the property.</li>
+<li><strong>The rehab holdback</strong> is the renovation budget. The lender commits to it at closing but holds it back and releases it in draws as work is completed and inspected.</li>
+</ul>
+
+<p>So on day one, you have signed for the full loan amount but only received part of it. The interest structure answers a simple question: do you pay for the part you have not received yet?</p>
+
+<h2>Dutch interest, also called full boat</h2>
+
+<p>With Dutch interest, the lender charges interest on the total committed loan from the closing date. Your payment is the same every month, whether you have drawn all of the rehab funds or none of them.</p>
+
+<p>Lenders who use it have reasons. The full amount is reserved for you from the day of closing, and that capital cannot be lent to anyone else. Many lenders fund the entire loan into a servicing account at closing, so their own cost of money starts on the whole balance right away. A level payment is also simple to service and simple for a borrower to budget.</p>
+
+<h2>Non-Dutch interest, also called interest on drawn funds</h2>
+
+<p>With non-Dutch interest, the lender charges interest only on the outstanding balance, meaning the initial advance plus whatever draws have been released so far. Your payment starts lower and rises each time a draw funds.</p>
+
+<p>This structure tracks the money you are actually using. It rewards a borrower who has not started work yet, and it softens the cost of delays early in a project. The payment changes month to month, so your carrying cost budget has to account for a moving number.</p>
+
+<h2>The same loan, both ways</h2>
+
+<p>Take a project with a $200,000 purchase and a $60,000 renovation. Total cost is $260,000. At 90 percent loan to cost, the loan is $234,000: a $174,000 initial advance and the $60,000 rehab budget held back. Use a 10.9 percent interest only rate for illustration. This is example math, not a quote.</p>
+
+<p><strong>Dutch.</strong> Interest is charged on $234,000 from day one. That is $2,125.50 every month. Over six months, $12,753.</p>
+
+<p><strong>Non-Dutch.</strong> Assume you take four draws of $15,000 each, funded at the end of months one through four.</p>
+
+<ul>
+<li>Month 1, balance $174,000: $1,580.50</li>
+<li>Month 2, balance $189,000: $1,716.75</li>
+<li>Month 3, balance $204,000: $1,853.00</li>
+<li>Month 4, balance $219,000: $1,989.25</li>
+<li>Months 5 and 6, balance $234,000: $2,125.50 each</li>
+</ul>
+
+<p>Total over six months: $11,390.50. The difference is $1,362.50 on a clean project that draws on schedule.</p>
+
+<p>Three things make that difference bigger.</p>
+
+<ul>
+<li><strong>A larger rehab budget relative to the purchase.</strong> The holdback is the only part of the loan the two structures treat differently. A heavy renovation with a $150,000 budget has far more undrawn money sitting idle than a cosmetic job.</li>
+<li><strong>A slow start.</strong> Permits, contractor scheduling, or a seller holdover can leave a project at zero draws for two months. Under Dutch interest you pay on the full budget that whole time. In the example above, every month with nothing drawn costs $545 in interest on money you have not touched.</li>
+<li><strong>Drawing late.</strong> Many investors float materials and labor themselves and request draws in a few large pieces near the end. Under a non-Dutch structure that habit lowers interest cost. Under Dutch it makes no difference to interest at all.</li>
+</ul>
+
+<h2>Turning the difference into a rate</h2>
+
+<p>The useful way to compare two offers is to convert them to the same terms. In the example, the Dutch loan at 10.9 percent cost $12,753 over six months. The non-Dutch loan would have to carry a rate of about 12.2 percent to cost the same, given that draw schedule. Put the other way, a Dutch loan at 10.9 percent and a non-Dutch loan at 11.9 percent are closer than they look, and the non-Dutch loan is still slightly cheaper on this project.</p>
+
+<p>That is why rate alone is a poor way to choose a lender. A full comparison has to include points, fees, and the interest structure together. We go through the points side of that in <a href="/points-vs-rate-on-a-flip-loan.html">points or rate on a six month flip</a>.</p>
+
+<h2>Where to find it on a term sheet</h2>
+
+<p>The words Dutch and non-Dutch almost never appear in the documents. Look for the sentence that describes what interest accrues on. It will read something like one of these.</p>
+
+<ul>
+<li>"Interest shall accrue on the full principal amount of the loan from the closing date." That is Dutch.</li>
+<li>"Interest shall accrue on the outstanding principal balance" or "on funds disbursed." That is non-Dutch.</li>
+</ul>
+
+<p>Then check the stated monthly payment. If the term sheet shows one fixed payment and that payment equals the full loan amount times the rate divided by twelve, it is Dutch. If it shows an initial payment based on the day one advance, it is non-Dutch.</p>
+
+<p>If the document is unclear, ask in writing: "Is interest charged on the full loan amount or only on drawn funds?" A lender with nothing to hide answers that in one line. Our guide to <a href="/hard-money-term-sheet-explained.html">reading a hard money term sheet line by line</a> covers the other items worth checking in the same pass.</p>
+
+<h2>Related terms that change the real cost</h2>
+
+<p>The interest structure sits next to a few other terms that affect what you actually pay.</p>
+
+<ul>
+<li><strong>Draw fees and inspection fees.</strong> Each draw usually involves an inspection, and many lenders charge for it. On a non-Dutch loan, taking many small draws keeps interest low but stacks up fees. Fewer, larger draws usually balance the two.</li>
+<li><strong>Draw turnaround.</strong> How many days pass between your request and money in your account? Slow draws force you to float contractors with your own cash, which is a cost even though it never shows up as interest.</li>
+<li><strong>Interest reserves.</strong> Some loans build several months of payments into the loan itself. That helps cash flow, and it also means you are borrowing your own interest payments.</li>
+<li><strong>Minimum interest.</strong> Some loans guarantee the lender a minimum number of months of interest even if you pay off sooner. That is separate from a prepayment penalty, and it matters on a fast flip.</li>
+<li><strong>Day count.</strong> Interest calculated on a 360 day year costs slightly more than on a 365 day year. It is small, and it is one more reason to compare totals instead of rates.</li>
+</ul>
+
+<h2>Which structure is better for you</h2>
+
+<p>It depends on the project in front of you.</p>
+
+<p><strong>Dutch interest costs you least when</strong> the rehab budget is small compared to the purchase price, work starts the week you close, and you draw quickly. On a light cosmetic flip the difference can be a few hundred dollars, and a lower rate or lower points from the Dutch lender may more than make up for it.</p>
+
+<p><strong>Non-Dutch interest matters most when</strong> the renovation is heavy, the timeline is long, permits will delay the start, or you typically fund work yourself and draw late. On those projects the structure is worth real money, and it is worth paying a slightly higher rate to get it.</p>
+
+<p>The only reliable method is to model your own project both ways. Lay out your realistic draw schedule month by month, including the slow start you hope will not happen, and total the interest under each offer. Then add points and fees. The cheapest loan is the one with the lowest total for your timeline, and it is not always the one with the lowest rate.</p>
+
+<h2>Put it in your holding cost budget</h2>
+
+<p>Whichever structure you have, interest is only one line in what a flip costs each month. Taxes, insurance, utilities, and lawn care run the whole time, and they do not care how your interest is calculated. Build the full monthly number before you make an offer. Our article on <a href="/monthly-holding-costs-house-flip.html">what holding a flip costs every month</a> walks through each line.</p>
+
+<p>Our <a href="/rehab-loans.html">rehab loan program</a> is interest only, with draws released as renovation milestones are completed and no prepayment penalty. When you request a term sheet, ask us how interest is calculated on the holdback and what the payment will be in month one. You should have that answer, from any lender, before you sign anything.</p>
+</article></div></section>
+<section class="article-wrap" style="padding-top:8px;"><div class="container"><div class="article-cta reveal"><h2>Have a deal on the calendar?</h2><p>Send us the details. We fund 100% of the A-B purchase, in as little as 24 hours, with no credit check and no upfront fees.</p><div class="cta-btns"><a href="./index.html#apply" class="btn btn-gold">Submit Your Deal <span class="arrow">&rarr;</span></a><a href="tel:6159796260" class="btn btn-secondary" style="color:var(--cream);border-color:rgba(255,255,255,.4);">Call 615-979-6260</a></div></div></div></section>
+<section class="related"><div class="container"><div class="eyebrow">Keep Reading</div><h2 class="section-title" style="font-size:clamp(26px,3vw,38px);">More for <em>investors</em></h2><div class="related-grid"><a href="./dscr-rate-buydown-points-break-even.html" class="related-card reveal"><span class="rc-tag">DSCR cost of capital</span><h3>Buying Down a DSCR Rate: When Paying Points Actually Pays Off</h3><p>Should you pay points to buy down a DSCR loan rate? Work the break-even on a real loan and see how hold period, prepay terms, and your ratio change the answer.</p></a><a href="./dscr-loan-on-property-that-needs-work.html" class="related-card reveal"><span class="rc-tag">Loan strategy</span><h3>Can You Get a DSCR Loan on a Property That Needs Work?</h3><p>Light cosmetic work usually closes on a DSCR loan. Real rehab does not. Where lenders draw the condition line, and when to bridge first and refinance after.</p></a><a href="./hard-money-first-flip-no-experience.html" class="related-card reveal"><span class="rc-tag">Fix and flip</span><h3>Getting a Hard Money Loan for Your First Flip: What No Track Record Changes</h3><p>Hard money lenders fund first flips every week. What no track record changes about leverage, the real cash-to-close math, and what strengthens a first file.</p></a></div></div></section>
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Key Partners Funding</div>
+        <div class="footer-tag">Fast, flexible hard money for real estate investors. Transactional funding, rehab loans, new construction, and DSCR — one partner for every deal stage.</div>
+        <div class="footer-contact">
+          130 Wilson Pike Circle<br>
+          Brentwood, TN 37027<br>
+          <a href="tel:6159796260" style="margin-top:6px;display:inline-block;">615-979-6260</a><br>
+          <a href="mailto:info@keypartnersfunding.com">info@keypartnersfunding.com</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Loan Products</div>
+        <div class="footer-links">
+          <a href="./transactional-funding.html">Transactional Funding</a>
+          <a href="./rehab-loans.html">Rehab Loans</a>
+          <a href="./new-construction.html">New Construction</a>
+          <a href="./dscr.html">DSCR Loans</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#about">About</a>
+          <a href="./index.html#apply">Apply Now</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <div class="footer-links">
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="./terms-of-service.html">Terms of Service</a>
+        </div>
+        <div class="footer-disclaimer">Key Partners Funding is a hard money lending company. All loans subject to approval. Not a licensed mortgage lender for owner-occupied properties.</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Key Partners Funding. All rights reserved.</span>
+      <span class="footer-bottom-links">
+        <a href="./privacy-policy.html">Privacy Policy</a>
+        <a href="./terms-of-service.html">Terms of Service</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<!-- floating bar -->
+<div id="floating-bar">
+  <span class="float-text">Have a deal to fund?</span>
+  <div class="float-btns">
+    <a href="tel:6159796260" class="float-phone">615-979-6260</a>
+    <a href="./index.html#apply" class="float-cta">Submit Deal &rarr;</a>
+    <button class="float-close" onclick="document.getElementById('floating-bar').style.display='none'">&times;</button>
+  </div>
+</div>
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.01, rootMargin: '0px 0px -20px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // fallback: never let a .reveal stay hidden (e.g. tall or above-fold blocks)
+  window.addEventListener('load', () => setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.in)').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight) el.classList.add('in');
+    });
+  }, 300));
+  const t = document.querySelector('.nav-toggle');
+  if (t) t.addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('open'));
+</script>
+</body>
+</html>
+
