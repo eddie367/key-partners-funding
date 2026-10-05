@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buying Down a DSCR Rate: When Paying Points Actually Pays Off | Key Partners Funding</title>
+<meta name="description" content="Should you pay points to buy down a DSCR loan rate? Work the break-even on a real loan and see how hold period, prepay terms, and your ratio change the answer.">
+<link rel="canonical" href="https://keypartnersfunding.com/dscr-rate-buydown-points-break-even.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Buying Down a DSCR Rate: When Paying Points Actually Pays Off">
+<meta property="og:description" content="Should you pay points to buy down a DSCR loan rate? Work the break-even on a real loan and see how hold period, prepay terms, and your ratio change the answer.">
+<meta property="og:url" content="https://keypartnersfunding.com/dscr-rate-buydown-points-break-even.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Buying Down a DSCR Rate: When Paying Points Actually Pays Off","description":"Should you pay points to buy down a DSCR loan rate? Work the break-even on a real loan and see how hold period, prepay terms, and your ratio change the answer.","author":{"@type":"Organization","name":"Key Partners Funding"},"publisher":{"@type":"Organization","name":"Key Partners Funding"},"mainEntityOfPage":"https://keypartnersfunding.com/dscr-rate-buydown-points-break-even.html"}</script>
+
+<style>
+  /* =========================
+     TOKENS
+     ========================= */
+  :root {
+    --cream:        #F8F4ED;
+    --cream-deep:   #F0E9DC;
+    --paper:        #FBF8F2;
+    --navy:         #0D1B2A;
+    --navy-mid:     #162436;
+    --navy-soft:    #1E3148;
+    --gold:         #C89B3C;
+    --gold-bright:  #E8B84B;
+    --gold-deep:    #A88130;
+    --ink:          #1F2937;
+    --ink-muted:    #5C6470;
+    --ink-soft:     #8B8378;
+    --rule:         #D9CFB8;
+    --rule-soft:    #E8DFCB;
+    --display:      'Fraunces', Georgia, 'Times New Roman', serif;
+    --body:         'DM Sans', system-ui, -apple-system, sans-serif;
+    --container:    1280px;
+    --section-pad:  clamp(32px, 4.5vw, 60px);
+  }
+
+  /* =========================
+     RESET / BASE
+     ========================= */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+  body {
+    font-family: var(--body);
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+  .container { max-width: var(--container); margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px); }
+
+  /* =========================
+     SHARED PRIMITIVES
+     ========================= */
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--gold-deep); margin-bottom: 14px;
+  }
+  .eyebrow::before { content: ''; width: 28px; height: 1.5px; background: var(--gold); }
+
+  .section-title {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(34px, 4.6vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    color: var(--navy);
+  }
+  .section-title em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--gold-deep);
+  }
+  .section-sub {
+    font-size: 17px;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    max-width: 620px;
+    margin-top: 12px;
+  }
+
+  .section-divider {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 56px);
+    position: relative;
+  }
+  .section-divider::before {
+    content: ''; display: block; height: 1px; background: var(--rule);
+  }
+  .section-divider::after {
+    content: '';
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 7px; height: 7px;
+    background: var(--cream);
+    border: 1px solid var(--gold);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px; border-radius: 4px;
+    font-family: var(--body); font-size: 14px;
+    font-weight: 600; letter-spacing: 0.3px;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--navy); color: var(--cream); }
+  .btn-primary:hover { background: var(--navy-mid); box-shadow: 0 6px 24px -8px rgba(13,27,42,0.3); }
+  .btn-secondary { background: transparent; color: var(--navy); border-color: var(--navy); }
+  .btn-secondary:hover { background: var(--navy); color: var(--cream); }
+  .btn-gold { background: var(--gold); color: var(--navy); }
+  .btn-gold:hover { background: var(--gold-bright); }
+  .btn-outline-gold {
+    background: transparent; color: var(--navy);
+    border: 1px solid var(--gold); padding: 12px 22px; font-size: 13px;
+  }
+  .btn-outline-gold:hover { background: var(--gold); }
+  .btn .arrow { font-family: var(--body); transition: transform 0.25s ease; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* Photo slots */
+  .photo-slot {
+    background: var(--cream-deep);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--rule);
+  }
+  .photo-slot::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border: 1px dashed rgba(200,155,60,0.45);
+    pointer-events: none;
+  }
+  .photo-slot::after {
+    content: '';
+    position: absolute;
+    top: 16px; right: 16px;
+    width: 8px; height: 8px;
+    border-top: 1px solid var(--gold);
+    border-right: 1px solid var(--gold);
+  }
+  .photo-slot-label { text-align: center; padding: 24px; z-index: 1; }
+  .photo-slot-id {
+    font-family: var(--display); font-style: italic;
+    font-size: 13px; color: var(--gold-deep); margin-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+  .photo-slot-desc {
+    font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--ink-muted); line-height: 1.6; max-width: 240px; margin: 0 auto;
+  }
+
+  /* Callout boxes */
+  .callout {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--gold);
+    padding: 24px 28px;
+    margin-top: 28px;
+  }
+  .callout-title {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--navy);
+    margin-bottom: 14px;
+    letter-spacing: 0.1px;
+  }
+  .callout ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .callout li {
+    font-size: 14.5px;
+    color: var(--ink-muted);
+    line-height: 1.6;
+    padding-left: 22px;
+    position: relative;
+  }
+  .callout li::before {
+    content: '';
+    position: absolute;
+    top: 9px; left: 0;
+    width: 12px; height: 1px;
+    background: var(--gold);
+  }
+  .callout-note {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule-soft);
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-family: var(--display);
+  }
+
+  /* Note line (light reassurance) */
+  .reassure {
+    margin-top: 20px;
+    padding: 14px 20px;
+    background: rgba(200,155,60,0.08);
+    border: 1px solid rgba(200,155,60,0.25);
+    font-size: 13.5px;
+    color: var(--gold-deep);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .reassure::before {
+    content: '';
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* =========================
+     NAV
+     ========================= */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(248,244,237,0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 56px);
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; }
+  .nav-logo-mark {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+    border-radius: 4px;
+  }
+  .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .nav-logo-name { font-family: var(--display); font-weight: 700; font-size: 17px; color: var(--navy); }
+  .nav-logo-sub { font-size: 9.5px; color: var(--ink-muted); letter-spacing: 2.2px; text-transform: uppercase; font-weight: 500; margin-top: 2px; }
+
+  .nav-links { display: flex; align-items: center; gap: 32px; }
+  .nav-links a {
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+    position: relative;
+  }
+  .nav-links a:hover { color: var(--gold-deep); }
+  .nav-links a.active { color: var(--gold-deep); }
+  .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0; right: 0;
+    height: 1.5px;
+    background: var(--gold);
+  }
+
+  .nav-services { position: relative; }
+  .nav-services > a { display: inline-flex; align-items: center; gap: 4px; }
+  .nav-dropdown {
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-4px);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 6px;
+    min-width: 240px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    box-shadow: 0 12px 32px -16px rgba(13,27,42,0.18);
+  }
+  .nav-services:hover .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+  .nav-dropdown a {
+    display: block;
+    padding: 11px 16px;
+    color: var(--ink) !important;
+    font-size: 14px;
+    border-radius: 2px;
+    transition: all 0.15s;
+  }
+  .nav-dropdown a.active {
+    color: var(--gold-deep) !important;
+    background: rgba(200,155,60,0.08);
+  }
+  .nav-dropdown a:hover {
+    background: var(--cream-deep);
+    color: var(--navy) !important;
+  }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 10px 22px;
+    font-weight: 600 !important;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--gold-bright); }
+
+  .nav-toggle { display: none; }
+
+  /* =========================
+     HERO
+     ========================= */
+  .hero {
+    padding-top: calc(84px + var(--section-pad));
+    padding-bottom: var(--section-pad);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(200,155,60,0.1);
+    border: 1px solid rgba(200,155,60,0.35);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+  }
+  .hero-badge-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(48px, 7.2vw, 92px);
+    line-height: 0.98;
+    letter-spacing: -1.5px;
+    color: var(--navy);
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--gold-deep);
+  }
+  .hero-sub {
+    margin-top: 18px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink-muted);
+    max-width: 560px;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+  }
+  .hero-photo {
+    aspect-ratio: 4/5;
+    width: 100%;
+  }
+  img.hero-photo {
+    object-fit: cover;
+    display: block;
+    border: 1px solid var(--rule);
+  }
+
+  /* =========================
+     TRUST BAR
+     ========================= */
+  .trust-bar {
+    background: var(--navy);
+    padding: 22px 0;
+    border-top: 1px solid var(--navy-mid);
+    border-bottom: 1px solid var(--navy-mid);
+  }
+  .trust-bar-inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 56px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px 28px;
+  }
+  .trust-item {
+    color: #E8DFCB;
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .trust-item:not(:last-child)::after {
+    content: '';
+    width: 4px; height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  /* =========================
+     WHAT IS IT
+     ========================= */
+  .what-is { padding: var(--section-pad) 0; }
+  .what-is-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+  }
+  .what-is-body p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--ink-muted);
+    line-height: 1.75;
+  }
+
+  /* Info grid — 2x3 layout, hairline rules */
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
+  }
+  .info-cell {
+    padding: 28px 24px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+  }
+  .info-cell-label {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 12px;
+  }
+  .info-cell-val {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--navy);
+    line-height: 1;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+  .info-cell-sub {
+    font-size: 12.5px;
+    color: var(--ink-muted);
+    line-height: 1.55;
+  }
+
+  /* =========================
+     PROCESS (vertical 5-step)
+     ========================= */
+  .process { padding: var(--section-pad) 0; }
+  .process-head {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .process-head .eyebrow { justify-content: center; }
+  .process-head .section-sub { margin: 12px auto 0; }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+  }
+
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+  .process-step {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 28px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    position: relative;
+  }
+  .process-step:first-child { padding-top: 0; }
+  .process-step:last-child { border-bottom: none; }
+  .process-num {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 1px solid var(--gold);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .process-title {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.25;
+  }
+  .process-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink-muted);
+  }
+
+  /* =========================
+     FAQ
+     ========================= */
+  .faq { padding: var(--section-pad) 0; }
+  .faq-head {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .faq-head .eyebrow { justify-content: center; }
+  .faq-list {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--rule);
+  }
+  .faq-item:first-child {
+    border-top: 1px solid var(--rule);
+  }
+  .faq-q {
+    width: 100%;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: var(--navy);
+    font-family: var(--display);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.3;
+    transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--gold-deep); }
+  .faq-icon {
+    width: 28px; height: 28px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-deep);
+    font-size: 16px;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+  }
+  .faq-item.open .faq-icon {
+    transform: rotate(45deg);
+    background: var(--gold);
+    color: var(--navy);
+  }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  .faq-item.open .faq-a { max-height: 600px; }
+  .faq-a-inner {
+    padding: 0 0 28px;
+    font-size: 15.5px;
+    color: var(--ink-muted);
+    line-height: 1.75;
+    max-width: 760px;
+  }
+  .faq-a-inner a {
+    color: var(--gold-deep);
+    border-bottom: 1px solid rgba(168,129,48,0.4);
+    transition: all 0.2s;
+  }
+  .faq-a-inner a:hover {
+    color: var(--navy);
+    border-bottom-color: var(--navy);
+  }
+
+  /* =========================
+     APPLY
+     ========================= */
+  .apply { padding: var(--section-pad) 0; }
+  .apply-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+  }
+
+  .time-sensitive {
+    margin-top: 36px;
+    padding: 24px 28px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--gold);
+  }
+  .time-sensitive-title {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .time-sensitive-body {
+    font-size: 14.5px;
+    color: var(--ink-muted);
+    line-height: 1.7;
+  }
+  .time-sensitive-body a {
+    color: var(--gold-deep);
+    font-weight: 600;
+    border-bottom: 1px solid rgba(168,129,48,0.4);
+    transition: all 0.2s;
+  }
+  .time-sensitive-body a:hover { color: var(--navy); border-bottom-color: var(--navy); }
+
+  .cross-sell {
+    margin-top: 32px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* Form */
+  .form-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 40px;
+  }
+  .form-title {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 26px;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .form-sub {
+    font-size: 14px;
+    color: var(--ink-muted);
+    margin-bottom: 32px;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .form-group label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 12px 14px;
+    font-family: var(--body);
+    font-size: 14px;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    border-radius: 2px;
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: var(--ink-soft); }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+  .form-group select { cursor: pointer; }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-submit {
+    width: 100%;
+    padding: 16px;
+    background: var(--navy);
+    color: var(--cream);
+    border: none;
+    font-family: var(--body);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+    border-radius: 2px;
+  }
+  .form-submit:hover { background: var(--navy-mid); }
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 48px 24px;
+  }
+  .form-success-mark {
+    width: 56px; height: 56px;
+    margin: 0 auto 20px;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-deep);
+    font-family: var(--display);
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .form-success-title {
+    font-family: var(--display);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .form-success-sub {
+    font-size: 14px;
+    color: var(--ink-muted);
+    line-height: 1.7;
+  }
+
+  /* =========================
+     FOOTER
+     ========================= */
+  footer {
+    background: var(--navy);
+    color: #CBD5E1;
+    padding: 72px 0 32px;
+  }
+  .footer-inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 56px);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: clamp(32px, 5vw, 56px);
+    margin-bottom: 48px;
+  }
+  .footer-brand-name {
+    font-family: var(--display);
+    font-size: 22px; font-weight: 700;
+    color: white; margin-bottom: 14px;
+  }
+  .footer-tag {
+    font-size: 14px; line-height: 1.7;
+    max-width: 320px; color: #B7BFCC;
+  }
+  .footer-contact {
+    margin-top: 20px;
+    font-size: 13.5px; line-height: 1.75;
+    color: #94A3B8;
+  }
+  .footer-contact a { color: var(--gold-bright); transition: color 0.2s; }
+  .footer-contact a:hover { color: var(--gold-light); }
+  .footer-col-title {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 16px;
+  }
+  .footer-links { display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a {
+    font-size: 14px; color: #B7BFCC;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold-bright); }
+  .footer-disclaimer {
+    margin-top: 20px;
+    font-size: 12px; color: #6B7889;
+    line-height: 1.65;
+  }
+  .footer-bottom {
+    padding-top: 28px;
+    border-top: 1px solid var(--navy-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 12.5px;
+    color: #6B7889;
+  }
+  .footer-bottom a { color: #94A3B8; }
+  .footer-bottom a:hover { color: var(--gold-bright); }
+  .footer-bottom-links { display: flex; gap: 22px; }
+
+  /* =========================
+     FLOATING BAR
+     ========================= */
+  #floating-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 90;
+    background: rgba(248,244,237,0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--rule);
+    padding: 14px clamp(16px, 4vw, 32px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    transition: transform 0.3s ease;
+  }
+  .float-text {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--navy);
+  }
+  .float-btns { display: flex; align-items: center; gap: 12px; }
+  .float-phone {
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 1px;
+    transition: color 0.2s;
+  }
+  .float-phone:hover { color: var(--gold-deep); }
+  .float-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .float-cta:hover { background: var(--gold-bright); }
+  .float-close {
+    color: var(--ink-muted);
+    font-size: 22px;
+    line-height: 1;
+    padding: 0 6px;
+    transition: color 0.2s;
+  }
+  .float-close:hover { color: var(--navy); }
+
+  body { padding-bottom: 72px; }
+
+  /* =========================
+     REVEAL ANIMATIONS
+     ========================= */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* =========================
+     RESPONSIVE
+     ========================= */
+  @media (max-width: 960px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-photo { aspect-ratio: 4/3; max-height: 480px; }
+
+    .what-is-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr; }
+    .apply-grid { grid-template-columns: 1fr; }
+
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+
+    .nav-links { display: none; position: absolute; top: 84px; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--rule); flex-direction: column; padding: 20px 5%; gap: 16px; align-items: stretch; }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 8px 0; }
+    .nav-links a.active::after { display: none; }
+    .nav-services { width: 100%; }
+    .nav-dropdown { position: static; transform: none; opacity: 1; visibility: visible; box-shadow: none; border: none; padding: 0 0 0 16px; min-width: 0; }
+    .nav-dropdown a { padding: 6px 0; }
+    .nav-cta { text-align: center; padding: 12px 22px; }
+
+    .nav-toggle {
+      display: flex; flex-direction: column; gap: 4px;
+      padding: 8px; background: none; border: none; cursor: pointer;
+    }
+    .nav-toggle span {
+      width: 22px; height: 1.5px;
+      background: var(--navy); transition: all 0.2s;
+    }
+
+    #floating-bar { flex-wrap: wrap; }
+    .float-text { display: none; }
+    .float-btns { width: 100%; justify-content: center; }
+  }
+
+  @media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+    .info-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .form-card { padding: 28px 24px; }
+    .trust-bar-inner { gap: 10px 18px; }
+    .trust-item { gap: 18px; font-size: 12.5px; }
+    .process-step { grid-template-columns: 1fr; gap: 16px; }
+    .process-num { margin-bottom: 4px; }
+  }
+</style>
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="./favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Key Partners Funding">
+  <meta property="og:image" content="https://keypartnersfunding.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://keypartnersfunding.com/og-image.png">
+
+<style>
+  /* ---- article layout ---- */
+  .article-hero { background: var(--navy); color: var(--cream); padding: clamp(64px,9vw,120px) 0 clamp(40px,5vw,64px); position: relative; }
+  .article-hero .eyebrow { color: var(--gold-bright); }
+  .article-hero .eyebrow::before { background: var(--gold-bright); }
+  .article-hero h1 { font-family: var(--display); font-weight: 600; font-size: clamp(34px,5vw,60px); line-height: 1.05; letter-spacing: -0.5px; max-width: 15ch; }
+  .article-hero h1 em { font-style: italic; font-weight: 400; color: var(--gold-bright); }
+  .article-hero .lede { font-size: clamp(17px,1.5vw,20px); color: #C9D2DC; line-height: 1.6; max-width: 60ch; margin-top: 20px; }
+  .article-meta { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 28px; font-size: 13px; color: #9FB0C0; letter-spacing: 0.3px; }
+  .article-meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .article-meta span::before { content: ''; width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); }
+
+  .article-wrap { padding: clamp(48px,6vw,84px) 0 clamp(32px,4vw,56px); }
+  .prose { max-width: 720px; margin: 0 auto; }
+  .prose h2 { font-family: var(--display); font-weight: 600; font-size: clamp(26px,3vw,36px); line-height: 1.15; color: var(--navy); letter-spacing: -0.3px; margin: 52px 0 16px; }
+  .prose h2:first-child { margin-top: 0; }
+  .prose h3 { font-family: var(--display); font-weight: 600; font-size: 21px; color: var(--navy); letter-spacing: -0.2px; margin: 34px 0 10px; }
+  .prose p { font-size: 17px; line-height: 1.75; color: var(--ink); margin-bottom: 18px; }
+  .prose ul, .prose ol { margin: 0 0 20px 2px; padding-left: 22px; }
+  .prose li { font-size: 17px; line-height: 1.7; color: var(--ink); margin-bottom: 9px; }
+  .prose li::marker { color: var(--gold-deep); }
+  .prose strong { font-weight: 700; color: var(--navy); }
+  .prose a.inline { color: var(--gold-deep); font-weight: 600; box-shadow: inset 0 -1px 0 var(--rule); }
+  .prose a.inline:hover { box-shadow: inset 0 -2px 0 var(--gold); }
+  .prose .lead { font-size: 18.5px; line-height: 1.7; color: var(--ink); font-weight: 500; margin-bottom: 24px; }
+
+  .callout { background: var(--paper); border: 1px solid var(--rule-soft); border-left: 3px solid var(--gold); border-radius: 4px; padding: 22px 26px; margin: 26px 0; }
+  .callout p { margin: 0; font-size: 16px; }
+  .callout .callout-label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 8px; }
+
+  .keytakeaways { background: var(--navy); color: var(--cream); border-radius: 6px; padding: 28px 30px; margin: 30px 0; }
+  .keytakeaways .callout-label { color: var(--gold-bright); display:block; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:14px; }
+  .keytakeaways ul { margin: 0; padding-left: 20px; }
+  .keytakeaways li { color: #DDE4EC; margin-bottom: 10px; }
+  .keytakeaways li::marker { color: var(--gold-bright); }
+
+  .steps { counter-reset: step; margin: 26px 0; }
+  .step { display: grid; grid-template-columns: 44px 1fr; gap: 18px; padding: 18px 0; border-top: 1px solid var(--rule-soft); }
+  .step:last-child { border-bottom: 1px solid var(--rule-soft); }
+  .step-num { counter-increment: step; }
+  .step-num::before { content: counter(step); display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--cream-deep); color: var(--navy); font-family: var(--display); font-weight: 600; font-size: 18px; border: 1px solid var(--rule); }
+  .step h3 { margin: 6px 0 6px; }
+  .step p { margin: 0; font-size: 16px; }
+
+  .cmp { width: 100%; border-collapse: collapse; margin: 26px 0; font-size: 15px; }
+  .cmp th, .cmp td { text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+  .cmp thead th { background: var(--navy); color: var(--cream); font-weight: 600; font-size: 13px; letter-spacing: 0.4px; }
+  .cmp tbody tr:nth-child(even) { background: var(--paper); }
+  .cmp td:first-child { font-weight: 600; color: var(--navy); }
+  .table-scroll { overflow-x: auto; }
+
+  .article-cta { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%); color: var(--cream); border-radius: 8px; padding: clamp(32px,4vw,52px); text-align: center; margin: 8px auto 0; max-width: 860px; }
+  .article-cta h2 { font-family: var(--display); font-weight: 600; font-size: clamp(26px,3vw,38px); color: var(--cream); margin-bottom: 12px; }
+  .article-cta h2 em { font-style: italic; color: var(--gold-bright); font-weight: 400; }
+  .article-cta p { color: #C9D2DC; font-size: 17px; max-width: 52ch; margin: 0 auto 24px; }
+  .article-cta .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  .related { padding: clamp(48px,6vw,80px) 0; background: var(--cream-deep); }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 20px; margin-top: 28px; }
+  .related-card { background: var(--paper); border: 1px solid var(--rule-soft); border-radius: 6px; padding: 24px; transition: all .2s ease; }
+  .related-card:hover { border-color: var(--gold); box-shadow: 0 10px 30px -14px rgba(13,27,42,.25); transform: translateY(-2px); }
+  .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-deep); }
+  .related-card h3 { font-family: var(--display); font-weight: 600; font-size: 20px; color: var(--navy); margin: 10px 0 8px; line-height: 1.2; }
+  .related-card p { font-size: 14.5px; color: var(--ink-muted); line-height: 1.6; margin: 0; }
+
+  /* learn index cards */
+  .learn-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 22px; margin-top: 40px; }
+  .learn-card { display: block; background: var(--paper); border: 1px solid var(--rule-soft); border-radius: 8px; padding: 30px; transition: all .2s ease; }
+  .learn-card:hover { border-color: var(--gold); box-shadow: 0 14px 36px -16px rgba(13,27,42,.3); transform: translateY(-3px); }
+  .learn-card .lc-num { font-family: var(--display); font-size: 15px; color: var(--gold-deep); font-weight: 600; }
+  .learn-card h2 { font-family: var(--display); font-weight: 600; font-size: 23px; color: var(--navy); margin: 12px 0 10px; line-height: 1.2; }
+  .learn-card p { font-size: 15px; color: var(--ink-muted); line-height: 1.65; margin: 0 0 16px; }
+  .learn-card .lc-more { font-size: 13px; font-weight: 700; letter-spacing: 0.4px; color: var(--gold-deep); }
+</style>
+</head>
+<body>
+<!-- ============ NAV ============ -->
+<nav>
+  <div class="nav-inner">
+    <a href="./index.html" class="nav-logo">
+      <img src="./logo-mark.png" alt="Key Partners Funding logo" class="nav-logo-mark">
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">Key Partners Funding</span>
+        <span class="nav-logo-sub">Hard Money Lender · Nationwide</span>
+      </div>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="./index.html">Home</a>
+      <div class="nav-services">
+        <a href="#" onclick="event.preventDefault()" style="display:flex;align-items:center;gap:4px;">Loan Products ▾</a>
+        <div class="nav-dropdown">
+          <a href="./transactional-funding.html">Transactional Funding</a>
+          <a href="./rehab-loans.html">Rehab Loans</a>
+          <a href="./new-construction.html">New Construction</a>
+          <a href="./dscr.html">DSCR Loans</a>
+        </div>
+      </div>
+      <div class="nav-services">
+        <a href="#" onclick="event.preventDefault()" style="display:flex;align-items:center;gap:4px;">Learn ▾</a>
+        <div class="nav-dropdown">
+          <a href="./what-is-transactional-funding.html">What Is Transactional Funding?</a>
+          <a href="./what-is-a-hard-money-loan.html">What Is a Hard Money Loan?</a>
+          <a href="./hard-money-helps-investors-scale.html">Scaling With Hard Money</a>
+          <a href="./hard-money-dscr-brrrr.html">Hard Money + DSCR for BRRRR</a>
+          <a href="./learn.html"><strong>All guides &rarr;</strong></a>
+        </div>
+      </div>
+      <a href="./index.html#about">About</a>
+      <a href="./index.html#apply" class="nav-cta">Apply Now</a>
+    </div>
+  </div>
+</nav>
+<section class="article-hero"><div class="container"><div class="eyebrow">DSCR cost of capital</div><h1>Buying Down a DSCR Rate: When Paying Points Actually Pays <em>Off</em></h1><p class="lede">Should you pay points to buy down a DSCR loan rate? Work the break-even on a real loan and see how hold period, prepay terms, and your ratio change the answer.</p><div class="article-meta"><span>Key Partners Funding</span><span>8 min read</span><span>Rental investors comparing DSCR loan quotes</span></div></div></section>
+<section class="article-wrap"><div class="container"><article class="prose">
+<p>Paying points to buy down a DSCR rate is worth it when you will keep the loan longer than the break-even period, which is the upfront cost of the points divided by the monthly payment savings. On a typical 30 year DSCR loan that break-even lands around five years. Hold the loan past that and the buydown makes money every month. Sell or refinance before it and you paid for savings you never collected. There is one exception that changes the answer completely: when the lower payment is what gets the property to qualify at all.</p>
+
+<p>This guide works the math on one loan from start to finish, then covers the three things that should move your decision: your hold period, your prepayment penalty, and your DSCR ratio.</p>
+
+<h2>What a point is and what it buys</h2>
+
+<p>One point is one percent of the loan amount, paid at closing. On a $300,000 loan, one point is $3,000. Points come in two kinds that often get blurred together on a quote.</p>
+
+<ul>
+<li><strong>Origination points</strong> are the lender's or broker's fee for making the loan. They do not change your rate.</li>
+<li><strong>Discount points</strong> are optional. You pay them to lower the interest rate for the life of the loan.</li>
+</ul>
+
+<p>This article is about discount points. When you compare quotes, make sure you know how many of the points on each one are buying rate and how many are simply cost. A loan with two points and a low rate may be one origination point plus one discount point, and the honest comparison is against a loan with one point and the higher rate. Our breakdown of <a href="/dscr-loan-closing-costs-and-fees.html">DSCR closing costs and fees</a> shows where each of these appears on the settlement statement.</p>
+
+<p>How much rate a point buys is not fixed. It changes with the market, the lender, your credit, and your leverage. A quarter of a percent per point is a common rule of thumb, and it is the figure used below, but your term sheet is the only source that counts.</p>
+
+<h2>The break-even math on a real loan</h2>
+
+<p>Take a $300,000 DSCR loan, 30 year fixed. The numbers here are for illustration only and are not a rate quote.</p>
+
+<ul>
+<li><strong>Option A, no discount points:</strong> 7.25 percent. Principal and interest is $2,046.53 a month.</li>
+<li><strong>Option B, one discount point ($3,000):</strong> 7.00 percent. Principal and interest is $1,995.91 a month.</li>
+<li><strong>Option C, two discount points ($6,000):</strong> 6.75 percent. Principal and interest is $1,945.79 a month.</li>
+</ul>
+
+<p>Option B saves $50.62 a month for $3,000 up front. Divide the cost by the savings: $3,000 divided by $50.62 is 59 months. Option C saves $100.74 a month for $6,000, which is 60 months. Either way, you are just under five years before the buydown has paid for itself.</p>
+
+<p>The lower rate also pays the loan down slightly faster. After five years the 7.00 percent loan has a balance about $740 lower than the 7.25 percent loan. That shortens the true break-even by a month or so. It does not change the shape of the decision.</p>
+
+<p>So the first question is simple. Will this loan still exist in five years?</p>
+
+<h2>Be honest about your hold period</h2>
+
+<p>Investors tend to say they are holding forever and then refinance or sell in year three. Before you pay for a rate you plan to keep for decades, look at what you have actually done with past loans and what could end this one early.</p>
+
+<ul>
+<li><strong>A rate drop.</strong> If rates fall meaningfully, you will want to refinance. Every dollar of discount points on the old loan that has not been earned back is gone the day you do.</li>
+<li><strong>A cash-out refinance.</strong> If the plan is to pull equity out in a few years to fund the next purchase, this loan has a short life no matter what you intend today. </li>
+<li><strong>A sale.</strong> A portfolio rebalance, a partner exit, or simply a strong offer.</li>
+</ul>
+
+<p>If your honest answer is seven years or more, a buydown with a five year break-even is a reasonable use of cash. If it is three years, keep the points in your pocket. If you do not know, that uncertainty is itself an argument for the higher rate and the lower closing cost, because cash kept is flexible and points paid are not.</p>
+
+<h2>Your prepayment penalty and your buydown should agree with each other</h2>
+
+<p>Most DSCR loans carry a prepayment penalty that steps down over time, and a longer penalty period usually earns a better rate. That creates a common mistake: an investor chooses the shortest prepayment period to stay flexible, then pays two discount points to get the rate back down. Those two choices point in opposite directions. The first says you might leave early. The second only pays if you stay.</p>
+
+<p>Line them up instead.</p>
+
+<ul>
+<li>If you are confident in a long hold, take the longer step-down for the rate improvement first, because that improvement costs nothing at closing. Then consider discount points on top.</li>
+<li>If you want the option to exit early, take the shorter step-down and skip the discount points.</li>
+</ul>
+
+<p>The full mechanics of the penalty structures are in <a href="/dscr-prepayment-penalty-step-down.html">how a 5/3/1 step-down works and how to choose</a>.</p>
+
+<h2>The exception: when the buydown makes the deal qualify</h2>
+
+<p>DSCR loans qualify on the property's rent divided by its monthly payment of principal, interest, taxes, insurance, and any association dues. A lower rate means a lower payment, and a lower payment means a higher ratio. Sometimes that is the difference between a loan and no loan.</p>
+
+<p>Same $300,000 loan. Say market rent is $2,500 and taxes plus insurance total $500 a month.</p>
+
+<ul>
+<li>At 7.25 percent, the payment is $2,546.53. The ratio is 0.98. Below 1.0, the property does not cover its own debt.</li>
+<li>At 7.00 percent, the payment is $2,495.91. The ratio is 1.00.</li>
+<li>At 6.75 percent, the payment is $2,445.79. The ratio is 1.02.</li>
+</ul>
+
+<p>Here the point is not competing against a five year break-even. It is competing against the other ways of fixing a ratio that falls short: bringing more cash to closing to shrink the loan, or walking away from the property. To get the ratio to 1.0 at 7.25 percent without points, you would have to cut the loan by roughly $6,800, which means $6,800 more down payment. One point at $3,000 gets you to the same place for less cash. In that situation the buydown is the cheapest tool available, even if you sell in three years.</p>
+
+<p>The same logic applies at pricing tiers. Lenders price loans in bands, and crossing from one band into the next can improve the rate or the leverage you are offered. If a buydown lifts your ratio into a better tier, the lender's pricing may improve by more than the point itself bought. Ask your loan officer to price both sides of the line. For how the ratio is built and where the tiers sit, see <a href="/how-to-calculate-dscr-rental-property.html">how to calculate DSCR on a rental</a>.</p>
+
+<h2>What else that $3,000 could do</h2>
+
+<p>Break-even math treats the points as if the only alternative were leaving the money in a drawer. An active investor has other uses for it, and the comparison is worth making out loud.</p>
+
+<ul>
+<li><strong>Reserves.</strong> One point on this loan is a little more than one full monthly payment. For a newer investor with thin reserves, that cushion can be worth more than $50 a month.</li>
+<li><strong>The next down payment.</strong> If you are buying two or three properties a year, discount points across every loan add up to a meaningful part of another acquisition.</li>
+<li><strong>A larger down payment on this loan.</strong> Putting the $3,000 toward principal instead lowers the payment by about $20 a month at these rates, less than half of what the point saves. Dollar for dollar, the point lowers the payment more. The extra down payment, though, stays yours as equity, and the point does not.</li>
+</ul>
+
+<p>Look at it as a return, too. Paying $3,000 to save about $607 a year is roughly a 20 percent annual return on the cash, for as long as the loan lasts. That is a strong number if you hold for ten years and a loss if you hold for three. The return depends entirely on time.</p>
+
+<h2>Financing the points</h2>
+
+<p>Some loans let you roll points into the loan amount instead of paying them in cash, as long as the leverage limit allows it. That preserves cash, but it means you are borrowing the points at the loan's rate for 30 years and your starting balance is higher. Run the break-even on the financed version separately. It will be longer.</p>
+
+<h2>A quick word on taxes</h2>
+
+<p>On a rental property, points are generally not deducted all at once in the year you pay them. They are typically spread across the life of the loan, with the remainder deducted if the loan is paid off early. That softens the cost a little and does not rescue a bad buydown. Your CPA should confirm the treatment for your situation.</p>
+
+<h2>How to decide in five minutes</h2>
+
+<ol>
+<li>Ask for the loan priced at least two ways: no discount points, and one or two points. Get the rate and the payment for each.</li>
+<li>Divide the extra cost by the monthly savings. That is your break-even in months.</li>
+<li>Compare it to a realistic hold period, and to the prepayment structure you are choosing.</li>
+<li>Check whether the lower rate moves your DSCR across 1.0 or into a better pricing tier. If it does, weigh the points against the extra down payment you would otherwise need.</li>
+<li>Decide what the cash is worth to you elsewhere.</li>
+</ol>
+
+<p>If the break-even is comfortably shorter than your hold, and the cash is not needed for reserves or the next deal, buy the rate down. If not, take the higher rate without regret. A slightly higher payment on a loan you can leave is often worth more than a lower one you paid to be locked into.</p>
+
+<p>Our <a href="/dscr.html">DSCR loan program</a> offers points starting at zero and step-down prepayment options, so you can ask us to price the same property both ways and see the trade in real numbers before you commit.</p>
+</article></div></section>
+<section class="article-wrap" style="padding-top:8px;"><div class="container"><div class="article-cta reveal"><h2>Have a deal on the calendar?</h2><p>Send us the details. We fund 100% of the A-B purchase, in as little as 24 hours, with no credit check and no upfront fees.</p><div class="cta-btns"><a href="./index.html#apply" class="btn btn-gold">Submit Your Deal <span class="arrow">&rarr;</span></a><a href="tel:6159796260" class="btn btn-secondary" style="color:var(--cream);border-color:rgba(255,255,255,.4);">Call 615-979-6260</a></div></div></div></section>
+<section class="related"><div class="container"><div class="eyebrow">Keep Reading</div><h2 class="section-title" style="font-size:clamp(26px,3vw,38px);">More for <em>investors</em></h2><div class="related-grid"><a href="./dscr-loan-on-property-that-needs-work.html" class="related-card reveal"><span class="rc-tag">Loan strategy</span><h3>Can You Get a DSCR Loan on a Property That Needs Work?</h3><p>Light cosmetic work usually closes on a DSCR loan. Real rehab does not. Where lenders draw the condition line, and when to bridge first and refinance after.</p></a><a href="./hard-money-first-flip-no-experience.html" class="related-card reveal"><span class="rc-tag">Fix and flip</span><h3>Getting a Hard Money Loan for Your First Flip: What No Track Record Changes</h3><p>Hard money lenders fund first flips every week. What no track record changes about leverage, the real cash-to-close math, and what strengthens a first file.</p></a><a href="./dscr-1-25-vs-1-0-what-the-ratio-changes.html" class="related-card reveal"><span class="rc-tag">DSCR</span><h3>DSCR 1.25 vs. 1.0: What the Ratio Actually Changes About Your Loan</h3><p>Both ratios can qualify for a DSCR loan. What changes is leverage, pricing, and cushion. See the five levers that move your coverage, with the math worked out.</p></a></div></div></section>
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Key Partners Funding</div>
+        <div class="footer-tag">Fast, flexible hard money for real estate investors. Transactional funding, rehab loans, new construction, and DSCR — one partner for every deal stage.</div>
+        <div class="footer-contact">
+          130 Wilson Pike Circle<br>
+          Brentwood, TN 37027<br>
+          <a href="tel:6159796260" style="margin-top:6px;display:inline-block;">615-979-6260</a><br>
+          <a href="mailto:info@keypartnersfunding.com">info@keypartnersfunding.com</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Loan Products</div>
+        <div class="footer-links">
+          <a href="./transactional-funding.html">Transactional Funding</a>
+          <a href="./rehab-loans.html">Rehab Loans</a>
+          <a href="./new-construction.html">New Construction</a>
+          <a href="./dscr.html">DSCR Loans</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#about">About</a>
+          <a href="./index.html#apply">Apply Now</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <div class="footer-links">
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="./terms-of-service.html">Terms of Service</a>
+        </div>
+        <div class="footer-disclaimer">Key Partners Funding is a hard money lending company. All loans subject to approval. Not a licensed mortgage lender for owner-occupied properties.</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Key Partners Funding. All rights reserved.</span>
+      <span class="footer-bottom-links">
+        <a href="./privacy-policy.html">Privacy Policy</a>
+        <a href="./terms-of-service.html">Terms of Service</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<!-- floating bar -->
+<div id="floating-bar">
+  <span class="float-text">Have a deal to fund?</span>
+  <div class="float-btns">
+    <a href="tel:6159796260" class="float-phone">615-979-6260</a>
+    <a href="./index.html#apply" class="float-cta">Submit Deal &rarr;</a>
+    <button class="float-close" onclick="document.getElementById('floating-bar').style.display='none'">&times;</button>
+  </div>
+</div>
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.01, rootMargin: '0px 0px -20px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // fallback: never let a .reveal stay hidden (e.g. tall or above-fold blocks)
+  window.addEventListener('load', () => setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.in)').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight) el.classList.add('in');
+    });
+  }, 300));
+  const t = document.querySelector('.nav-toggle');
+  if (t) t.addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('open'));
+</script>
+</body>
+</html>
+
