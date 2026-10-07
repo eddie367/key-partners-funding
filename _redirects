@@ -1,3 +1,6 @@
+# Borrower term sheet links: standalone app built from DealHub (scripts/publish_ts_app.sh)
+/ts/*   /ts-app/index.html   200
+
 # Get terms intake page (posts to the DealHub loan intake RPC)
 /get-terms   /get-terms.html   200
 

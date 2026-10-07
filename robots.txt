@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 
 Disallow: /thank-you.html
+Disallow: /ts/
+Disallow: /ts-app/
 
 Sitemap: https://keypartnersfunding.com/sitemap.xml
