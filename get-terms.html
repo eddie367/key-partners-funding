@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Get Terms on Your Flip | Key Partners Funding</title>
-<meta name="description" content="Tell us about your fix and flip and your recent projects. It takes about 5 minutes, and we follow up with terms. 615-979-6260.">
+<meta name="description" content="Tell us about your fix and flip and your experience. It takes about 3 minutes, and we follow up with terms. 615-979-6260.">
 <link rel="canonical" href="https://keypartnersfunding.com/get-terms">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -996,11 +996,6 @@
   .gt-field input, .gt-field select, .gt-field textarea { width: 100%; box-sizing: border-box; padding: 12px 13px; border: 1px solid var(--rule); border-radius: 10px; font: inherit; font-size: 16px; color: var(--ink); background: var(--paper); }
   .gt-field input:focus, .gt-field select:focus, .gt-field textarea:focus { outline: none; border-color: var(--gold); background: #fff; }
   .gt-field .gt-help { font-size: 12.5px; color: var(--ink-soft); margin-top: 4px; }
-  .gt-project { border: 1px solid var(--rule-soft); background: var(--paper); border-radius: 14px; padding: 16px 16px 2px; margin-bottom: 14px; }
-  .gt-project-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-  .gt-project-head strong { font-family: var(--display); color: var(--navy); font-size: 17px; font-weight: 600; }
-  .gt-remove { background: none; border: 0; color: #B91C1C; font-size: 13px; cursor: pointer; }
-  .gt-add { width: 100%; padding: 13px; border-radius: 12px; border: 1.5px dashed var(--gold); background: transparent; color: var(--navy); font: inherit; font-weight: 600; font-size: 15px; cursor: pointer; }
   .gt-submit { width: 100%; justify-content: center; font-size: 17px; padding: 16px 22px; border: 0; cursor: pointer; }
   .gt-err { display: none; background: #FEF2F2; border-left: 4px solid #B91C1C; color: #991B1B; padding: 12px 14px; border-radius: 10px; font-size: 14.5px; margin-bottom: 16px; }
   .gt-fine { font-size: 12.5px; color: var(--ink-soft); text-align: center; line-height: 1.55; margin-top: 14px; }
@@ -1008,6 +1003,11 @@
   .gt-done .mark { width: 56px; height: 56px; border-radius: 50%; background: var(--gold); color: var(--navy); display: inline-flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 700; }
   .gt-done h2 { margin-top: 16px; font-size: 30px; }
   .gt-done p { font-size: 16.5px; line-height: 1.65; color: var(--ink); max-width: 540px; margin: 12px auto 0; }
+  .gt-yn { display: flex; max-width: 360px; border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; background: #fff; }
+  .gt-yn button { flex: 1; padding: 12px 10px; font: inherit; font-size: 16px; font-weight: 600; border: 0; background: #fff; color: var(--navy); cursor: pointer; }
+  .gt-yn button + button { border-left: 1px solid var(--rule); }
+  .gt-yn button[aria-pressed="true"] { background: var(--navy); color: var(--cream); }
+  .gt-q { display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
   .gt-hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
   @media (max-width: 640px) { .gt-grid, .gt-grid-3 { grid-template-columns: minmax(0, 1fr); } }
 </style>
@@ -1016,8 +1016,8 @@
   <div class="container">
     <div class="gt-eyebrow">Fix and flip financing</div>
     <h1>Get terms on<br><em>your next flip.</em></h1>
-    <p>Tell us about the deal and your recent projects. It takes about 5 minutes. We review every submission and follow up with terms.</p>
-    <div class="gt-points"><span>1 to 4 unit investment properties</span><span>Up to 90% of cost</span><span>Interest only, draws as work is completed</span></div>
+    <p>Tell us about the deal and your experience. It takes about 3 minutes. We review every submission and follow up with terms.</p>
+    <div class="gt-points"><span>1 to 4 unit investment properties</span><span>Up to 100% of cost</span><span>Interest only, draws as work is completed</span></div>
   </div>
 </section>
 
@@ -1026,8 +1026,8 @@
     <div class="gt-card gt-done" id="gt-done">
       <div class="mark">✓</div>
       <h2>Thank you, <span id="gt-first"></span>.</h2>
-      <p>We have your deal and your projects. We'll review everything and follow up by email from loans@keypartnersfunding.com with your terms.</p>
-      <p style="color: var(--ink-muted); font-size: 15px;">When that email arrives, reply to it with your full track record if you have more projects than you listed here. Questions in the meantime? Call <a href="tel:6159796260" style="color: var(--gold-deep);">615-979-6260</a>.</p>
+      <p>We have your deal and your experience. We'll review everything and follow up by email from loans@keypartnersfunding.com with your terms.</p>
+      <p style="color: var(--ink-muted); font-size: 15px;">Questions in the meantime? Call <a href="tel:6159796260" style="color: var(--gold-deep);">615-979-6260</a>.</p>
     </div>
 
     <form id="gt-form" novalidate>
@@ -1061,10 +1061,16 @@
       </div>
 
       <div class="gt-card">
-        <h2>Your track record</h2>
-        <p class="gt-hint">Projects from the last 24 months, current or complete. Your experience sets your rate and leverage, so the more complete this is, the better your terms can be.</p>
-        <div id="gt-projects"></div>
-        <button type="button" class="gt-add" id="gt-add">+ Add another project</button>
+        <h2>Your experience</h2>
+        <p class="gt-hint">Your experience sets your rate and leverage. Count only properties you personally owned or controlled through your company.</p>
+        <div class="gt-grid">
+          <div class="gt-field"><label for="gt-rentals">Rental properties bought and held at least 1 year *</label><input id="gt-rentals" name="rentals_held_1yr" type="number" min="0" inputmode="numeric" placeholder="0"></div>
+          <div class="gt-field"><label for="gt-flips">Flips fully completed and sold in the last 36 months *</label><input id="gt-flips" name="flips_sold_36mo" type="number" min="0" inputmode="numeric" placeholder="0"></div>
+        </div>
+        <div class="gt-field"><span class="gt-q">Have you ever had a mortgage, including on your personal residence? *</span>
+          <div class="gt-yn" data-name="has_had_mortgage" role="group" aria-label="Have you ever had a mortgage"><button type="button" data-v="yes" aria-pressed="false">Yes</button><button type="button" data-v="no" aria-pressed="false">No</button></div></div>
+        <div class="gt-field"><span class="gt-q">Do you live in the same state as the investment property? *</span>
+          <div class="gt-yn" data-name="lives_in_property_state" role="group" aria-label="Do you live in the same state as the property"><button type="button" data-v="yes" aria-pressed="false">Yes</button><button type="button" data-v="no" aria-pressed="false">No</button></div></div>
       </div>
 
       <div class="gt-err" id="gt-err"></div>
@@ -1074,27 +1080,6 @@
   </div>
 </main>
 
-<template id="gt-project-tpl">
-  <div class="gt-project">
-    <div class="gt-project-head"><strong>Project <span class="n"></span></strong><button type="button" class="gt-remove">Remove</button></div>
-    <div class="gt-grid">
-      <div class="gt-field"><label>Status</label><select data-k="status"><option value="">Choose</option><option value="complete">Complete</option><option value="current">Current</option></select></div>
-      <div class="gt-field"><label>Project type</label><select data-k="project_type"><option value="">Choose</option><option value="fix_flip">Fix and flip</option><option value="construction">Construction</option><option value="rental">Rental</option></select></div>
-      <div class="gt-field gt-full"><label>Purchaser / entity name</label><input data-k="purchaser_entity" maxlength="200"></div>
-      <div class="gt-field gt-full"><label>Property address</label><input data-k="property_address" maxlength="300"></div>
-    </div>
-    <div class="gt-grid-3">
-      <div class="gt-field"><label>City</label><input data-k="city" maxlength="100"></div>
-      <div class="gt-field"><label>State</label><input data-k="state" maxlength="2" placeholder="TN"></div>
-      <div class="gt-field"><label>Purchase date</label><input data-k="purchase_date" type="date"></div>
-      <div class="gt-field"><label>Purchase price</label><input data-k="purchase_price" inputmode="decimal" maxlength="20" placeholder="$"></div>
-      <div class="gt-field"><label>Renovation costs</label><input data-k="renovation_cost" inputmode="decimal" maxlength="20" placeholder="$"></div>
-      <div class="gt-field"><label>Sale price</label><input data-k="sale_price" inputmode="decimal" maxlength="20" placeholder="$"></div>
-      <div class="gt-field"><label>Sale date</label><input data-k="sale_date" type="date"></div>
-      <div class="gt-field"><label>Monthly rent</label><input data-k="monthly_rent" inputmode="decimal" maxlength="20" placeholder="$"><div class="gt-help">If it's a rental</div></div>
-    </div>
-  </div>
-</template>
 
 <!-- ============ FOOTER ============ -->
 <footer>
@@ -1149,23 +1134,19 @@
   // Posts to Key Partners Funding's loan intake (insert-only database function:
   // honeypot, 5 per connection per hour, length limits; it cannot read anything).
   (function () {
-    var SB = "https://sqfdrrqodxxztvyskhgb.supabase.co", ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxZmRycnFvZHh4enR2eXNraGdiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODExMDE0NjAsImV4cCI6MjA5NjY3NzQ2MH0.-YWajsZHg8j0PzITkvNKuAQBx3eiWhz1AfpdZS5ybZY", MAX = 25;
-    var list = document.getElementById("gt-projects"), tpl = document.getElementById("gt-project-tpl");
-    function renumber() {
-      var rows = list.querySelectorAll(".gt-project");
-      rows.forEach(function (r, i) { r.querySelector(".n").textContent = i + 1; r.querySelector(".gt-remove").style.display = rows.length > 1 ? "" : "none"; });
-      document.getElementById("gt-add").style.display = rows.length >= MAX ? "none" : "";
-    }
-    function addRow() {
-      var node = tpl.content.firstElementChild.cloneNode(true);
-      node.querySelector(".gt-remove").addEventListener("click", function () { node.remove(); renumber(); });
-      list.appendChild(node); renumber();
-    }
-    document.getElementById("gt-add").addEventListener("click", addRow);
-    addRow();
+    var SB = "https://sqfdrrqodxxztvyskhgb.supabase.co", ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxZmRycnFvZHh4enR2eXNraGdiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODExMDE0NjAsImV4cCI6MjA5NjY3NzQ2MH0.-YWajsZHg8j0PzITkvNKuAQBx3eiWhz1AfpdZS5ybZY";
+    var yn = {};
+    document.querySelectorAll(".gt-yn").forEach(function (g) {
+      g.querySelectorAll("button").forEach(function (b) {
+        b.addEventListener("click", function () {
+          yn[g.getAttribute("data-name")] = b.getAttribute("data-v");
+          g.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+        });
+      });
+    });
     var ERR = {
       rate_limited: "We received several submissions from this connection in the last hour. Please try again later or call 615-979-6260.",
-      missing_required: "Please fill in your name, a valid email, the property address, and the estimated close date.",
+      missing_required: "Please fill in your name, a valid email, the property address, the estimated close date, and all four experience questions.",
       invalid: "Something in the form looks off. Please check the numbers and dates and try again."
     };
     var form = document.getElementById("gt-form"), err = document.getElementById("gt-err"), btn = document.getElementById("gt-submit");
@@ -1174,12 +1155,12 @@
       e.preventDefault();
       err.style.display = "none";
       var p = { source: "website" };
-      ["website", "name", "email", "phone", "entity", "property_address", "loan_purpose", "close_date", "purchase_price", "rehab_amount", "arv", "credit_band", "exit", "notes"]
+      ["website", "name", "email", "phone", "entity", "property_address", "loan_purpose", "close_date", "purchase_price", "rehab_amount", "arv", "credit_band", "exit", "notes", "rentals_held_1yr", "flips_sold_36mo"]
         .forEach(function (k) { var el = form.elements[k]; p[k] = el ? el.value : ""; });
-      if (!p.name.trim() || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(p.email) || p.property_address.trim().length < 5 || !p.close_date) { showErr(ERR.missing_required); return; }
-      p.track_record = Array.prototype.map.call(list.querySelectorAll(".gt-project"), function (r) {
-        var o = {}; r.querySelectorAll("[data-k]").forEach(function (el) { o[el.getAttribute("data-k")] = el.value; }); return o;
-      }).filter(function (o) { return (o.property_address || "").trim() || (o.purchase_price || "").trim(); }).slice(0, MAX);
+      p.has_had_mortgage = yn.has_had_mortgage || "";
+      p.lives_in_property_state = yn.lives_in_property_state || "";
+      if (!p.name.trim() || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(p.email) || p.property_address.trim().length < 5 || !p.close_date
+          || p.rentals_held_1yr === "" || p.flips_sold_36mo === "" || !p.has_had_mortgage || !p.lives_in_property_state) { showErr(ERR.missing_required); return; }
       btn.disabled = true; btn.style.opacity = 0.6;
       fetch(SB + "/rest/v1/rpc/submit_loan_intake", {
         method: "POST",
