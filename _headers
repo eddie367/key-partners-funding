@@ -3,6 +3,10 @@
   X-Robots-Tag: noindex, nofollow, noarchive
   Referrer-Policy: no-referrer
   Cache-Control: no-store
+/upload/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Referrer-Policy: no-referrer
+  Cache-Control: no-store
 /ts-app/*
   X-Robots-Tag: noindex, nofollow, noarchive
   Referrer-Policy: no-referrer
