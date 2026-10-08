@@ -1150,6 +1150,16 @@
 </footer>
 
 <script>
+  // Proper case for the name we greet ("Edward", never "EDWARD"). Mirrors
+  // properName() in DealHub's src/lib/emailMerge.js.
+  function properName(name) {
+    var s = String(name == null ? "" : name).trim().replace(/\s+/g, " ");
+    if (!s || /^(zz|demo)\b/i.test(s)) return s;
+    return s.split(" ").map(function (part) {
+      if (/^\p{Lu}/u.test(part) && /\p{Ll}/u.test(part)) return part;
+      return part.toLowerCase().replace(/(^|[-'’])(\p{L})/gu, function (_, sep, ch) { return sep + ch.toUpperCase(); });
+    }).join(" ");
+  }
   // Posts to Key Partners Funding's loan intake (insert-only database function:
   // honeypot, 5 per connection per hour, length limits; it cannot read anything).
   (function () {
@@ -1199,7 +1209,7 @@
           showErr(ERR[k] || "Something went wrong. Please try again or call 615-979-6260.");
           return;
         }
-        document.getElementById("gt-first").textContent = p.name.trim().split(/\s+/)[0];
+        document.getElementById("gt-first").textContent = properName(p.name.trim().split(/\s+/)[0]);
         document.getElementById("gt-where").textContent = p.property_address.trim() + ", " + p.city.trim();
         form.style.display = "none";
         document.getElementById("gt-hero").style.display = "none";
