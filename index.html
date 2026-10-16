@@ -1572,7 +1572,7 @@
         <div class="form-card">
           <div id="main-fields">
             <div class="form-title">Get Started</div>
-            <div class="form-sub">Quick info. We'll email you a short form to get your terms started.</div>
+            <div class="form-sub">Quick info, then a few deal details and we'll get your terms over.</div>
             <form id="hp-lead" novalidate>
               <p style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></p>
               <div class="form-row">
@@ -1664,7 +1664,7 @@
   // Submit homepage lead form, then route user to product-specific application
   // Homepage lead form: posts to the DealHub loan desk (insert-only database function
   // submit_web_lead: honeypot, 5 per connection per hour, length limits; it can't read anything).
-  // The lead gets an email with a prefilled Get Terms link.
+  // The visitor goes straight on to the full Get Terms form, prefilled.
   (function () {
     var SB = "https://sqfdrrqodxxztvyskhgb.supabase.co", ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxZmRycnFvZHh4enR2eXNraGdiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODExMDE0NjAsImV4cCI6MjA5NjY3NzQ2MH0.-YWajsZHg8j0PzITkvNKuAQBx3eiWhz1AfpdZS5ybZY";
     var form = document.getElementById("hp-lead"); if (!form) return;
@@ -1684,11 +1684,13 @@
         .then(function (res) {
           btn.disabled = false; btn.style.opacity = 1;
           if (!res.ok) { showErr(res.t.indexOf("rate_limited") >= 0 ? "We received several requests from this connection. Please try again later or call 615-979-6260." : "Something went wrong. Please try again or call 615-979-6260."); return; }
-          var q = new URLSearchParams({ name: p.name, email: p.email }); if (p.loan_type) q.set("loan_type", p.loan_type);
-          document.getElementById("main-fields").innerHTML = '<div class="form-success-mark">✓</div><div class="form-title">Thanks, ' + esc(first || p.name)
-            + '.</div><div class="form-sub" style="margin-bottom:16px">We just emailed you a short form to get your terms started. Have the numbers handy? You can fill it in now.</div>'
-            + '<a class="form-submit" style="display:block;text-align:center;text-decoration:none" href="./get-terms?' + q.toString() + '">Add my deal details now →</a>'
-            + '<p style="font-size:13px;margin-top:12px;opacity:.8">Questions? Call or text <a href="tel:6159796260">615-979-6260</a>.</p>';
+          // straight on to the full Get Terms form, prefilled; the lead token merges it into this lead
+          var lead = ""; try { lead = (JSON.parse(res.t) || {}).lead || ""; } catch (x) { lead = ""; }
+          var q = new URLSearchParams({ name: p.name, email: p.email });
+          if (p.phone) q.set("phone", p.phone);
+          if (p.loan_type) q.set("loan_type", p.loan_type);
+          if (/^[a-f0-9]{32}$/.test(lead)) q.set("lead", lead);
+          window.location.href = "./get-terms?" + q.toString();
         })
         .catch(function () { btn.disabled = false; btn.style.opacity = 1; showErr("We couldn't reach our server. Please try again or call 615-979-6260."); });
     });
