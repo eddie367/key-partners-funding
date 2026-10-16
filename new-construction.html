@@ -1284,54 +1284,10 @@
 
       <div class="reveal">
         <div class="form-card">
-          <div id="nc-success" class="form-success">
-            <div class="form-success-mark">✓</div>
-            <div class="form-success-title">Request Submitted</div>
-            <div class="form-success-sub">We'll review your project and reach out shortly. Call <a href="tel:6159796260" style="color:var(--gold-deep);">615-979-6260</a> to talk through the details.</div>
-          </div>
-          <div id="nc-fields">
-            <div class="form-title">Get a Quote</div>
-            <div class="form-sub">New construction loan inquiry</div>
-            <form name="kpf-construction" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit_nc(event)">
-              <input type="hidden" name="form-name" value="kpf-construction">
-              <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
-              <div class="form-row">
-                <div class="form-group"><label>First Name</label><input type="text" name="first-name" placeholder="John" required></div>
-                <div class="form-group"><label>Last Name</label><input type="text" name="last-name" placeholder="Smith" required></div>
-              </div>
-              <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="john@email.com" required></div>
-              <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="615-000-0000" required></div>
-              <div class="form-group"><label>Project Address / Lot Location</label><input type="text" name="property" placeholder="123 Main St, Nashville, TN" required></div>
-              <div class="form-row">
-                <div class="form-group"><label>Land / Lot Value</label><input type="text" name="land-value" placeholder="$80,000"></div>
-                <div class="form-group"><label>Construction Budget</label><input type="text" name="construction-budget" placeholder="$220,000" required></div>
-              </div>
-              <div class="form-row">
-                <div class="form-group"><label>Expected Completed Value</label><input type="text" name="completed-value" placeholder="$420,000"></div>
-                <div class="form-group"><label>Credit Score (approx.)</label><input type="text" name="credit-score" placeholder="700"></div>
-              </div>
-              <div class="form-group">
-                <label>Do You Own the Lot?</label>
-                <select name="own-lot">
-                  <option value="">Select</option>
-                  <option>Yes — free and clear</option>
-                  <option>Yes — with existing mortgage</option>
-                  <option>No — need to acquire</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Planned Exit</label>
-                <select name="exit-strategy" required>
-                  <option value="">How do you plan to exit?</option>
-                  <option>Sell upon completion</option>
-                  <option>Refinance into permanent financing</option>
-                  <option>Hold as rental — DSCR refi</option>
-                </select>
-              </div>
-              <div class="form-group"><label>Project Description</label><textarea name="notes" placeholder="Number of units, square footage, builder experience, expected start date, any other details..." required></textarea></div>
-              <button type="submit" class="form-submit">Get a Quote →</button>
-            </form>
-          </div>
+          <div class="form-title">Get a Quote</div>
+          <div class="form-sub">New construction loan inquiry</div>
+          <!-- Get Terms form (posts to the DealHub loan desk), rendered by /gt-form.js -->
+          <div class="gt-embed" data-loan-type="ground_up" data-source="new-construction"></div>
         </div>
       </div>
     </div>
@@ -1398,23 +1354,6 @@
 </div>
 
 <script>
-  async function handleSubmit_nc(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-    try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString()
-      });
-    } catch (err) { /* Netlify still captures in production */ }
-    const params = new URLSearchParams({
-      first_name: data.get('first-name') || '',
-      product: 'new-construction'
-    });
-    window.location.href = './thank-you.html?' + params.toString();
-  }
   // Prefill basic info from URL params (when arriving from homepage lead form)
   (function () {
     const params = new URLSearchParams(window.location.search);
@@ -1445,5 +1384,6 @@
   });
 </script>
 
+<script src="./gt-form.js" defer></script>
 </body>
 </html>

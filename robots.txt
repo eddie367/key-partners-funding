@@ -1,8 +1,13 @@
 User-agent: *
+Disallow: /transactional-funding.html
+Disallow: /transactional-funding
+Disallow: /what-is-transactional-funding.html
+Disallow: /what-is-transactional-funding
 Allow: /
 
 Disallow: /thank-you.html
 Disallow: /ts/
 Disallow: /ts-app/
+Disallow: /upload/
 
 Sitemap: https://keypartnersfunding.com/sitemap.xml

@@ -1163,6 +1163,15 @@
   // Posts to Key Partners Funding's loan intake (insert-only database function:
   // honeypot, 5 per connection per hour, length limits; it cannot read anything).
   (function () {
+    // Prefill from the link in our email (or the homepage): name, email, phone, loan type
+    (function () {
+      var q = new URLSearchParams(window.location.search), f = document.getElementById("gt-form");
+      var full = q.get("name") || [q.get("first_name"), q.get("last_name")].filter(Boolean).join(" ");
+      if (full) f.elements.name.value = full;
+      if (q.get("email")) f.elements.email.value = q.get("email");
+      if (q.get("phone")) f.elements.phone.value = q.get("phone");
+      if (/^(fix_flip|ground_up|dscr)$/.test(q.get("loan_type") || "")) f.elements.loan_type.value = q.get("loan_type");
+    })();
     var zip = document.getElementById("gt-zip");
     zip.addEventListener("input", function () { zip.value = zip.value.replace(/\D/g, "").slice(0, 5); });
     var SB = "https://sqfdrrqodxxztvyskhgb.supabase.co", ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxZmRycnFvZHh4enR2eXNraGdiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODExMDE0NjAsImV4cCI6MjA5NjY3NzQ2MH0.-YWajsZHg8j0PzITkvNKuAQBx3eiWhz1AfpdZS5ybZY";
@@ -1185,7 +1194,7 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       err.style.display = "none";
-      var p = { source: "website" };
+      var p = { source: "website: get-terms" };
       ["website", "name", "email", "phone", "entity", "loan_type", "property_address", "city", "state", "zip", "close_date", "purchase_price", "rehab_amount", "arv", "credit_band", "exit", "notes", "rentals_held_1yr", "flips_sold_36mo"]
         .forEach(function (k) { var el = form.elements[k]; p[k] = el ? el.value : ""; });
       p.has_had_mortgage = yn.has_had_mortgage || "";
