@@ -959,6 +959,7 @@
           <a href="./rehab-loans.html">Rehab Loans</a>
           <a href="./new-construction.html">New Construction</a>
           <a href="./dscr.html">DSCR Loans</a>
+          <a href="./dscr-calculator.html">DSCR Calculator</a>
         </div>
       </div>
             <div class="nav-services">
@@ -1029,7 +1030,7 @@
   <div class="container">
     <div class="gt-confirm" id="gt-done">
       <div class="gt-eyebrow">Request received</div>
-      <h1>Thanks, <span id="gt-first"></span>. We have your deal.</h1>
+      <h2>Thanks, <span id="gt-first"></span>. We have your deal.</h2>
       <p class="gt-lead">We're reviewing <span id="gt-where"></span> now. You'll hear from us within one business day with your terms or any questions.</p>
       <div class="gt-card">
         <h2>What happens next</h2>
@@ -1171,6 +1172,11 @@
       if (q.get("email")) f.elements.email.value = q.get("email");
       if (q.get("phone")) f.elements.phone.value = q.get("phone");
       if (/^(fix_flip|ground_up|dscr)$/.test(q.get("loan_type") || "")) f.elements.loan_type.value = q.get("loan_type");
+      // from the DSCR calculator: carry the price and the numbers they ran
+      var pp = (q.get("purchase_price") || "").replace(/[^0-9]/g, "");
+      if (pp && f.elements.purchase_price) f.elements.purchase_price.value = pp;
+      var nt = (q.get("notes") || "").slice(0, 500);
+      if (nt && f.elements.notes && !f.elements.notes.value) f.elements.notes.value = nt;
       // arriving from the homepage form: say thanks and keep the lead token so it merges
       var lead = q.get("lead") || "";
       if (/^[a-f0-9]{32}$/.test(lead)) {
