@@ -1097,6 +1097,15 @@
   .calc-note { font-size: 12px; color: #94A3B8; margin-top: 12px; line-height: 1.5; }
   .dot-band { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:8px; vertical-align:middle; }
 </style>
+<style>
+  .prose table { width: 100%; border-collapse: collapse; margin: 18px 0 24px; font-size: 15.5px; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(13,27,42,0.05); }
+  .prose th, .prose td { padding: 11px 14px; border-bottom: 1px solid #EEE7DA; text-align: left; vertical-align: top; }
+  .prose thead th { font-size: 12.5px; text-transform: uppercase; letter-spacing: .6px; color: #6B7280; background: #FBF8F2; }
+  .prose td:not(:first-child), .prose th:not(:first-child) { text-align: right; white-space: nowrap; }
+  .prose tbody tr:last-child td { border-bottom: 0; }
+  .prose .small { font-size: 13px; color: #6B7280; margin-top: 28px; }
+  @media (max-width: 640px) { .prose table { display: block; overflow-x: auto; font-size: 14px; } .prose th, .prose td { padding: 9px 10px; } }
+</style>
 </head>
 <body>
 
@@ -1121,11 +1130,14 @@
           <a href="./new-construction.html">New Construction</a>
           <a href="./dscr.html">DSCR Loans</a>
           <a href="./dscr-calculator.html">DSCR Calculator</a>
+          <a href="./dscr-loans-by-state.html">DSCR Loans by State</a>
         </div>
       </div>
       <div class="nav-services">
         <a href="#" onclick="event.preventDefault()" style="display:flex;align-items:center;gap:4px;">Learn ▾</a>
         <div class="nav-dropdown">
+          <a href="./dscr-loan-requirements.html">DSCR Loan Requirements</a>
+          <a href="./dscr-loan-rates.html">DSCR Loan Rates</a>
           <a href="./what-is-a-hard-money-loan.html">What Is a Hard Money Loan?</a>
           <a href="./hard-money-helps-investors-scale.html">Scaling With Hard Money</a>
           <a href="./hard-money-dscr-brrrr.html">Hard Money + DSCR for BRRRR</a>
@@ -1344,6 +1356,14 @@
       calc();
     });
   });
+  // Prefill from a market page link: ?price=&rent=&tax=&ins=&hoa=&down=&rate=
+  (function () {
+    var q = new URLSearchParams(location.search), map = { price: "c-price", rent: "c-rent", tax: "c-tax", ins: "c-ins", hoa: "c-hoa", down: "c-down", rate: "c-rate" };
+    Object.keys(map).forEach(function (k) {
+      var v = (q.get(k) || "").replace(/[^0-9.]/g, "");
+      if (v) { var el = $(map[k]); el.value = el.parentNode.classList.contains("money") ? Math.round(+v).toLocaleString("en-US") : v; }
+    });
+  })();
   calc();
 })();
 </script>
