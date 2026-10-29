@@ -10,3 +10,33 @@
 /proof-of-funds        /   302
 # Transactional funding pages are HIDDEN, not redirected (Eddie 10/16/26): reachable by direct
 # link only, noindex, robots Disallow, and no links from any other page.
+
+# DSCR market pages for states our DSCR lender does not serve (removed 10/29/26)
+/dscr-loans-minnesota   /dscr-loans-by-state   301
+/dscr-loans-minnesota.html   /dscr-loans-by-state   301
+/dscr-loans-nevada   /dscr-loans-by-state   301
+/dscr-loans-nevada.html   /dscr-loans-by-state   301
+/dscr-loans-new-jersey   /dscr-loans-by-state   301
+/dscr-loans-new-jersey.html   /dscr-loans-by-state   301
+/dscr-loans-new-york   /dscr-loans-by-state   301
+/dscr-loans-new-york.html   /dscr-loans-by-state   301
+/dscr-loans-north-dakota   /dscr-loans-by-state   301
+/dscr-loans-north-dakota.html   /dscr-loans-by-state   301
+/dscr-loans-pennsylvania   /dscr-loans-by-state   301
+/dscr-loans-pennsylvania.html   /dscr-loans-by-state   301
+/dscr-loans-south-dakota   /dscr-loans-by-state   301
+/dscr-loans-south-dakota.html   /dscr-loans-by-state   301
+/dscr-loans-utah   /dscr-loans-by-state   301
+/dscr-loans-utah.html   /dscr-loans-by-state   301
+/dscr-loans-las-vegas-nv   /dscr-loans-by-state   301
+/dscr-loans-las-vegas-nv.html   /dscr-loans-by-state   301
+/dscr-loans-philadelphia-pa   /dscr-loans-by-state   301
+/dscr-loans-philadelphia-pa.html   /dscr-loans-by-state   301
+/dscr-loans-pittsburgh-pa   /dscr-loans-by-state   301
+/dscr-loans-pittsburgh-pa.html   /dscr-loans-by-state   301
+/dscr-loans-buffalo-ny   /dscr-loans-by-state   301
+/dscr-loans-buffalo-ny.html   /dscr-loans-by-state   301
+/dscr-loans-minneapolis-mn   /dscr-loans-by-state   301
+/dscr-loans-minneapolis-mn.html   /dscr-loans-by-state   301
+/dscr-loans-salt-lake-city-ut   /dscr-loans-by-state   301
+/dscr-loans-salt-lake-city-ut.html   /dscr-loans-by-state   301
