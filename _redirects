@@ -1,6 +1,3 @@
-# One hop from the old http://www address to the real one (was two hops, Ahrefs 11/13/26)
-http://www.keypartnersfunding.com/*   https://keypartnersfunding.com/:splat   301!
-
 # Borrower term sheet links: standalone app built from DealHub (scripts/publish_ts_app.sh)
 /ts/*   /ts-app/index.html   200
 # Secure borrower document upload (same standalone app)
