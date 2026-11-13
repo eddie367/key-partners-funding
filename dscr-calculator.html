@@ -4,11 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DSCR Calculator: Does Your Rental Qualify?</title>
-<meta name="description" content="Free DSCR calculator for rental property loans. Enter rent, taxes, insurance and loan terms to see your DSCR, your PITIA, and the most a DSCR lender will likely lend.">
+<meta name="description" content="Free DSCR calculator for rental loans. Enter rent, taxes, insurance and loan terms to see your DSCR, your payment and the most a lender will likely lend.">
+<meta name="twitter:title" content="DSCR Calculator: Does Your Rental Qualify?">
+<meta name="twitter:description" content="Free DSCR calculator for rental loans. Enter rent, taxes, insurance and loan terms to see your DSCR, your payment and the most a lender will likely lend.">
 <link rel="canonical" href="https://keypartnersfunding.com/dscr-calculator">
 <meta property="og:type" content="website">
 <meta property="og:title" content="DSCR Calculator: Does Your Rental Qualify?">
-<meta property="og:description" content="Free DSCR calculator for rental property loans. Enter rent, taxes, insurance and loan terms to see your DSCR, your PITIA, and the most a DSCR lender will likely lend.">
+<meta property="og:description" content="Free DSCR calculator for rental loans. Enter rent, taxes, insurance and loan terms to see your DSCR, your payment and the most a lender will likely lend.">
 <meta property="og:url" content="https://keypartnersfunding.com/dscr-calculator">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1356,9 +1358,9 @@
       calc();
     });
   });
-  // Prefill from a market page link: ?price=&rent=&tax=&ins=&hoa=&down=&rate=
+  // Prefill from a market page link: #price=&rent=&tax=&ins=&hoa=&down=&rate= (a ?query still works)
   (function () {
-    var q = new URLSearchParams(location.search), map = { price: "c-price", rent: "c-rent", tax: "c-tax", ins: "c-ins", hoa: "c-hoa", down: "c-down", rate: "c-rate" };
+    var q = new URLSearchParams(location.hash.length > 1 ? location.hash.slice(1) : location.search), map = { price: "c-price", rent: "c-rent", tax: "c-tax", ins: "c-ins", hoa: "c-hoa", down: "c-down", rate: "c-rate" };
     Object.keys(map).forEach(function (k) {
       var v = (q.get(k) || "").replace(/[^0-9.]/g, "");
       if (v) { var el = $(map[k]); el.value = el.parentNode.classList.contains("money") ? Math.round(+v).toLocaleString("en-US") : v; }
